@@ -1,0 +1,29 @@
+# Все в игнор
+*
+
+# Исключаем из игнора файлы
+!.gitignore
+
+# Перечисляем каталоги в которых есть изменяемые файлы
+!Dissertation
+!biblio
+!common
+
+# Перечисляем сами файлы
+!dissertation.tex
+
+!Dissertation/part1.tex
+!Dissertation/part2.tex
+!Dissertation/part3.tex
+!Dissertation/part4.tex
+
+
+!biblio/othercites.bib
+!biblio/authorconferences.bib
+!biblio/authorpapers.bib
+!biblio/authorpapersVAK.bib
+
+!common/characteristic.tex
+
+!README.md
+
