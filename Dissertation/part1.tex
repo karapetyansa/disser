@@ -3,23 +3,63 @@
 \section{Обзор литературы} \label{sect1_1}
 
 \section{Теория рассеяния носителей на шероховатой поверхности в размерно-ограниченных системах} \label{sect1_2}
-Из-за неровности поверхности случайным образом меняется ширина a размерно-ограниченной системы, что приводит к флуктуации энергии размерного квантования $E_n$ при движении носителя параллельно поверхности исследуемой квантовой системы. Следовательно, энергия взаимодействия электрона (дырки) с шероховатой поверхностью в случае двухмерного электронного газа может быть записана в следующем виде \cite{Sakaki1987}
+Из-за неровности поверхности случайным образом меняется ширина $a$ размерно-ограниченной системы, что приводит к флуктуации энергии размерного квантования $E_n$ при движении носителя параллельно поверхности исследуемой квантовой системы. Следовательно, энергия взаимодействия электрона (дырки) с шероховатой поверхностью в случае двухмерного электронного газа может быть записана в следующем виде \cite{Sakaki1987}
 \begin{equation}
-W(x,y)=\frac{\partial {{E}_{n}}}{\partial a}\Delta (x,y)\equiv {{V}_{n}}\Delta (x,y)
+W(x,y)=\frac{\partial E_n}{\partial a}\Delta(x,y)\equiv V_n \Delta(x,y)
 \end{equation}
 
 Например, для прямоугольной квантовой ямы (КЯ) с бесконечными стенками для потенциала:
 \begin{equation}
-E_n = \frac{\hbar^2 \pi^2 n^2}{2m a^2}=E_0 n^2 \Rightarrow V_n = -\frac{2}{E_0}n^2
+E_n = \frac{\hbar^2 \pi^2 n^2}{2ma^2}=E_0 n^2 \Rightarrow V_n = -\frac{2}{E_0}n^2
 \end{equation}
 
 Для случая квантовой ямы с параболическим потенциалом для электрона с эффективной массой $m_e$:
 \begin{equation}
-E_n=2\hbar {\left[\frac{2\Delta E_c} {m_e}\right]}^{\frac{1}{2}}\frac{1}{a}\left(n+\frac{1}{2}\right) = \hbar \omega_e\left(n+\frac{1}{2}\right), V_n=-\frac{1}{a}\hbar \omega_e\left(n+\frac{1}{2}\right)
+E_n=2\hbar \left[ \frac{2\Delta E_c} {m_e} \right]^\frac{1}{2} \frac{1}{a}\left( n + \frac{1}{2} \right) = \hbar \omega_e \left( n + \frac{1}{2} \right), V_n = -\frac{1}{a} \hbar \omega_e \left( n + \frac{1}{2} \right)
 \end{equation}
 $\Delta E_c$ --- высота параболического потенциала на границе наноструктуры, $\hbar \omega_e$ --- энергия размерного квантования.
 
 Часто в расчетах кинетических коэффициентов используется случай гауссовой флуктуации поверхности, когда автокорреляционная функция для различных точек поверхности определяется соотношением:
 \begin{equation}
-\left\{\Delta (x,y)\Delta (x',y')\right\}_{V} =\Delta ^{2} {\rm exp}\left[-\frac{1}{\Lambda ^{2} } \left((x-x')^{2} +(y-y')^{2} \right)\right] \equiv F\left(\left|\boldsymbol{\rho} - \boldsymbol{\rho '} \right|\right)
+\label{eq:1_4}
+\left\{ \Delta(x,y)\Delta(x',y') \right\}_V = \Delta^2 \exp \left[ - \frac{1}{\Lambda^2} \left( (x-x')^2 +(y-y')^2 \right) \right] \equiv F \left( \left| \boldsymbol{\rho} - \boldsymbol{\rho'} \right| \right),
 \end{equation}
+здесь:
+$\Delta, \Lambda$ --- высота и ширина гауссовой флуктуации соответственно, 
+$\left\{ ... \right\}_V$
+описывает усреднение по реализации случайного процесса 
+$\Delta(x,y)$, $\left| \boldsymbol{\rho} - \boldsymbol{\rho'} \right| = (x-x')^2 + (y-y')^2$.
+Естественно, что можно рассматривать случай $\delta$-образной флуктуации \cite{Lozovik1998}, когда
+\begin{equation}
+\label{eq:1_5}
+\left\{ \Delta(x,y)\Delta(x',y') \right\} = \gamma\delta\left( \boldsymbol{\rho} - \boldsymbol{\rho'} \right) = \gamma_0\delta(x-x')(y-y')=\tilde{F} \left(\left| \boldsymbol{\rho} - \boldsymbol{\rho'} \right|\right)
+\end{equation}
+$\gamma_0$ --- определяет квадрат амплитуды флуктуации.
+
+Если исследовать случай одномерного электронного газа (примером могут служить квантовые проволоки, квантовые нанотрубки), то для гауссовой флуктуации поверхности автокорреляционная функция для различных точек поверхности по аналогии (\ref{eq:1_4}) может быть записана следующим образом:
+\begin{equation}
+\label{eq:1_6}
+\left\{\Delta(x)\Delta(x')\right\}=\Delta^2_0 \exp \left[-\frac{(x-x')}{\Lambda^2_0}\right] = F_0(x-x')
+\end{equation}
+Для случая $\delta$-образной флуктуации поверхности естественно положить:
+\begin{equation}
+\label{eq:1_7}
+\left\{\Delta(x)\Delta(x')\right\}= \gamma\delta(x-x') = \tilde{F}_0(x-x')
+\end{equation}
+
+Время релаксации носителей на шероховатой поверхности, определяется квантово-механической вероятностью рассеяния в единицу времени, в нижайшем порядке теории возмущений определяется соотношением:
+\begin{equation}
+\frac{1}{t_a}=\frac{2\pi}{\hbar} \sum_\beta{V_\alpha V_\beta W_{\alpha\beta}\delta\left(\epsilon_\alpha-\epsilon_\beta\right)}
+\end{equation}
+\[
+W_{\alpha\beta}=\int{d\vect{r} d\vect{r_1} \Psi^*_\alpha(\vect{r}) \Psi^*_\beta(\vect{r_1}) V_\alpha V_\beta F \Psi_\alpha(\vect{r_1}) \Psi_\beta(\vect{r})}
+\]
+$\Psi_\alpha(\vect{r_1})$--- волновая функция носителей в состоянии $\alpha$ в размерно-квантованной системе. $F$ определяется соотношением (\labelcref{eq:1_4,eq:1_5,eq:1_6,eq:1_7}).
+
+{\color{red} Вставить выражение для $W_{\alpha\beta}$, аналогично тому как ниже вставили для проволок}
+
+Для квазидвумерных систем (квантовые ямы с различным профилем потенциала, гетероструктуры) в случае гауссовой флуктуации поверхности \label{eq:1_4} не трудно получить:
+\begin{equation}
+\frac{1}{\tau_a}=\frac{\pi m_e}{\hbar^3}{\left(\Delta \Lambda V_n\right)}^2 e^{-\frac{1}{2}{\left(\Lambda k_\bot \right)}^2} I_0 \left[\frac{1}{2}{\left(\Lambda k_\bot \right)}^2\right]
+\end{equation}
+
