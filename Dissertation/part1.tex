@@ -51,7 +51,8 @@ $\gamma_0$ --- определяет квадрат амплитуды флукт
 
 Время релаксации носителей на шероховатой поверхности, определяется квантово-механической вероятностью рассеяния в единицу времени, в нижайшем порядке теории возмущений определяется соотношением:
 \begin{equation}
-\frac{1}{t_a}=\frac{2\pi}{\hbar} \sum_\beta{V_\alpha V_\beta W_{\alpha\beta}\delta\left(\epsilon_\alpha-\epsilon_\beta\right)}
+\label{eq:1_8}
+\frac{1}{\tau_a}=\frac{2\pi}{\hbar} \sum_\beta{V_\alpha V_\beta W_{\alpha\beta}\delta\left(\varepsilon_\alpha-\varepsilon_\beta\right)}
 \end{equation}
 \[
 W_{\alpha\beta}=\int{d\vect{r} d\vect{r_1} \Psi^*_\alpha(\vect{r}) \Psi^*_\beta(\vect{r_1}) V_\alpha V_\beta F \Psi_\alpha(\vect{r_1}) \Psi_\beta(\vect{r})}
@@ -87,4 +88,30 @@ $I_0(z)$ – модифицированная функция Бесселя ну
 \begin{equation}
 \frac{1}{\tau_\alpha} \sim \frac{1}{a^2}(\hbar\omega_e)^2{\left(n + \frac{1}{2}\right)}^2
 \end{equation}
-Следовательно, для двумерного электронного газа время релаксации при рассеянии на шероховатой поверхности (\ref{eq:1_10}), (\ref{eq:1_11})  справедливо для произвольного вида потенциала
+Следовательно, для двумерного электронного газа время релаксации при рассеянии на шероховатой поверхности (\ref{eq:1_10}), (\ref{eq:1_11})  справедливо для произвольного вида потенциала $V(\vect{\rho})$:
+\[
+\left[-\frac{\hbar^2}{2m_e}\frac{\partial^2}{\partial \vect{\rho}^2}+V(\vect{\rho})\right]\Psi_n(\vect{\rho})=E_n\Psi_n(\vect{\rho}).
+\]
+
+Для одномерных квантовых систем (например нанопроволоки, нанотрубки) когда носители свободно движутся вдоль оси $OX$ исследуемой наноструктуры и волновая функция определяется как
+\[
+\psi_\alpha(\vect{r})=Ce^{ik_x}\varphi(y,z),
+\]
+то согласно (\ref{eq:1_8}) для гаусовой флуктуации поверхности
+\begin{equation}
+W_{\alpha\beta }=\frac{\Delta^2_0}{L_x}\sqrt{\pi}\Lambda_0 \exp\left[-\frac{(k_x-k'_x)\Lambda^2_0}{4}\right] \delta_{nn'},
+\end{equation}
+для $\delta$-образной флуктуации поверхности
+\begin{equation}
+W_{\alpha\beta }=\frac{\gamma_0}{L_x}\delta_{nn'}.
+\end{equation}
+Наличие символов Кронекера указывает, что процессы рассеяния носителей происходят в одной зоне. Следовательно согласно (\ref{eq:1_8}) время релаксации определяется соотношением
+{\color{red}\[
+\frac{1}{\tau_\alpha}=\frac{2\pi}{\hbar }\frac{L_x}{2\pi }{\left|V_a\right|}^2\int{W_{\alpha\beta}\delta(k_x-k'_x)dk'_x}.
+\]}
+{\color{red}Нет суммы по $\beta$ (подразумевается что там дельта символ, но зачем тогда писать $\beta$) и $2\pi$ и в числителе и знаменателе}.
+
+Для квадратичного закона дисперсии
+\[
+\varepsilon_{k_x}=\frac{\hbar^2 k^2_x}{2m_e} 
+\] 
