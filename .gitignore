@@ -8,16 +8,18 @@
 !Dissertation
 !biblio
 !common
+!images
 
 # Перечисляем сами файлы
 !dissertation.tex
+!dissertation.pdf
 
 !Dissertation/part1.tex
 !Dissertation/part2.tex
 !Dissertation/part3.tex
 !Dissertation/part4.tex
 
-
+!biblio/biblatex.tex
 !biblio/othercites.bib
 #!biblio/authorconferences.bib
 #!biblio/authorpapers.bib
@@ -25,6 +27,8 @@
 
 !common/characteristic.tex
 !common/data.tex
+
+!images/*
 
 !README.md
 
