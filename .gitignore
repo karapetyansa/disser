@@ -24,7 +24,7 @@
 !biblio/othercites.bib
 #!biblio/authorconferences.bib
 #!biblio/authorpapers.bib
-#!biblio/authorpapersVAK.bib
+!biblio/authorpapersVAK.bib
 
 !common/characteristic.tex
 !common/data.tex
