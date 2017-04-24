@@ -12,7 +12,7 @@
 \end{equation} 
 $\hat{p}_{\alpha \beta }^{(i)} $ -- матричный элемент оператора импульса на сглаженных волновых функциях зонного электрона, $\beta _{0} =1/k_{0} T$, $\alpha $ -- квантовые числа, описывающие состояние заряженной частицы с эффективной массой m, $V$ -- объем основной области системы,
 \[
-a_{\alpha }^{+} (t)={\rm exp}\left(\frac{it\hat{H}}{\hbar } \right)a_{\alpha }^{+} {\rm exp}\left(-\frac{it\hat{H}}{\hbar } \right),
+a_{\alpha }^{+} (t)={\mathrm exp}\left(\frac{it\hat{H}}{\hbar } \right)a_{\alpha }^{+} {\mathrm exp}\left(-\frac{it\hat{H}}{\hbar } \right),
 \] 
 $\left\langle \cdot \cdot \cdot \right\rangle $ -- описывает усреднение по системе равновесных электронов и по реализации случайного процесса
 
@@ -111,21 +111,21 @@ g_{\alpha }\left(t\right)=-2\sum_{\gamma }{W_{\alpha \gamma }\frac{{{\sin}^2 \fr
 Для прямоугольной КЯ с бесконечным потенциалом для случая гауссовой флуктуации поверхности
 
 \begin{equation} \label{eq:31_160}
-W_{\gamma \beta } =\frac{\pi }{L_{x} L_{y} } (\Delta \Lambda )^{2} V_{\gamma } V_{\beta } {\rm exp}\left[-\frac{\Lambda ^{2} }{4} \left|k_{\bot } -k'_{\bot } \right|^{2} \right],
+W_{\gamma \beta } =\frac{\pi }{L_{x} L_{y} } (\Delta \Lambda )^{2} V_{\gamma } V_{\beta } {\mathrm exp}\left[-\frac{\Lambda ^{2} }{4} \left|k_{\bot } -k'_{\bot } \right|^{2} \right],
 \end{equation}
 
 \noindent и время релаксации при рассеянии носителей в одной зоне определяется соотношением:
 
 \begin{equation} \label{eq:31_170}
-\frac{1}{\tau _{\alpha } } =\frac{\pi m(\Delta \Lambda V_{1} )^{2} }{\hbar ^{3} } {\rm exp}\left(-\frac{\Lambda ^{2} }{2} k_{\bot }^{2} \right){\rm I}_{{\rm 0}} \left(\frac{\Lambda ^{2} }{2} k_{\bot }^{2} \right),   (10)
+\frac{1}{\tau _{\alpha } } =\frac{\pi m(\Delta \Lambda V_{1} )^{2} }{\hbar ^{3} } {\mathrm exp}\left(-\frac{\Lambda ^{2} }{2} k_{\bot }^{2} \right){\mathrm I}_{{\mathrm 0}} \left(\frac{\Lambda ^{2} }{2} k_{\bot }^{2} \right),   (10)
 \end{equation}
 
-\noindent ${\rm I}_{0} (z)$ -- модифицированная функция Бесселя нулевого индекса, $V_{1} =-\frac{\hbar ^{2} \pi ^{2} }{mL^{3} } $.
+\noindent ${\mathrm I}_{0} (z)$ -- модифицированная функция Бесселя нулевого индекса, $V_{1} =-\frac{\hbar ^{2} \pi ^{2} }{mL^{3} } $.
 
 Рассмотрим, случай, когда электроны находятся на нижайшем размерно-квантованном уровне ($n=1$) прямоугольной КЯ. Это выполнимо, если $3\hbar ^{2} \pi ^{2} /\left(2mL^{2} \right)>>k_{0} T$. В результате \eqref{eq:31_150} после суммирования по $k_{\bot } $ принимает вид:
 
 \begin{equation} \label{eq:31_180}
-\sigma _{xx} =\frac{e^{2} \hbar ^{3} }{m^{2} \pi ^{2} \left(\Delta \Lambda ^{2} V_{1} \right)^{2} L} \delta \int _{0}^{\infty }d\tau \frac{\tau \cdot {\rm exp}\left(\delta \tau -\beta \tilde{\xi }\right)}{{\rm exp(}-\tau ){\rm I}_{{\rm 0}} (\tau )\cdot \left[{\rm exp}\left(\delta \tau -\beta \tilde{\xi }\right)+1\right]^{2} },
+\sigma _{xx} =\frac{e^{2} \hbar ^{3} }{m^{2} \pi ^{2} \left(\Delta \Lambda ^{2} V_{1} \right)^{2} L} \delta \int _{0}^{\infty }d\tau \frac{\tau \cdot {\mathrm exp}\left(\delta \tau -\beta \tilde{\xi }\right)}{{\mathrm exp(}-\tau ){\mathrm I}_{{\mathrm 0}} (\tau )\cdot \left[{\mathrm exp}\left(\delta \tau -\beta \tilde{\xi }\right)+1\right]^{2} },
 \end{equation}
 
 \[
@@ -135,7 +135,7 @@ W_{\gamma \beta } =\frac{\pi }{L_{x} L_{y} } (\Delta \Lambda )^{2} V_{\gamma } V
 $\tilde{\xi }=\xi -\varepsilon _{1} $ -- химический потенциал, отсчитанный от дна нижайшей зоны:
 
 \begin{equation} \label{eq:31_190}
-\beta _{0} \tilde{\xi }={\rm ln}\left[{\rm exp}\left(\frac{\beta _{0} \pi \hbar ^{2} n_{s} }{m} \right)-1\right].
+\beta _{0} \tilde{\xi }={\mathrm ln}\left[{\mathrm exp}\left(\frac{\beta _{0} \pi \hbar ^{2} n_{s} }{m} \right)-1\right].
 \end{equation}
 
 \noindent  $n_{s} $~---~поверхностная плотность электронного газа.
@@ -159,14 +159,14 @@ $$\left(\beta _{0} \pi \hbar ^{2} n_{s} /m_{e} <<1\right), {\exp}\left(\beta _{0
 Для вырожденного электронного газа при низких T электропроводность принимает вид:
 
 \begin{equation} \label{eq:31_210}
-\sigma _{xx}^{(d)} =\frac{e^{2} \hbar \tilde{\xi }}{\pi ^{2} Lm\left(\Delta \Lambda V_{1} \right)^{2} } \frac{{\rm exp}\left(\frac{m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }\right)}{{\rm I}_{{\rm 0}} \left(\frac{m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }\right)} ,    (14)
+\sigma _{xx}^{(d)} =\frac{e^{2} \hbar \tilde{\xi }}{\pi ^{2} Lm\left(\Delta \Lambda V_{1} \right)^{2} } \frac{{\mathrm exp}\left(\frac{m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }\right)}{{\mathrm I}_{{\mathrm 0}} \left(\frac{m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }\right)} ,    (14)
 \end{equation}
 
 
 Если $\beta _{0} \pi \hbar ^{2} n_{s} /m>>1$, то $\tilde{\xi }=\pi \hbar ^{2} n_{s} /m$ и подвижность определяется соотношением:
 
 \begin{equation} \label{eq:31_220}
-\mu ^{(d)} =\mu _{0} \frac{{\rm exp}\left(a\right)}{{\rm I}_{{\rm 0}} \left(a\right)},
+\mu ^{(d)} =\mu _{0} \frac{{\mathrm exp}\left(a\right)}{{\mathrm I}_{{\mathrm 0}} \left(a\right)},
 \end{equation}
 
 \[
@@ -215,13 +215,13 @@ V(x)=\frac{\partial E_{n} }{\partial R_{0} } \Delta (x)\equiv \tilde{V}_{n} \cdo
 и в случае гауссовской флуктуации поверхности автокорреляционная функция для различных точек поверхности записывается в виде:
 
 \begin{equation} \label{eq:31_280}
-\left\{\Delta (x)\Delta (x')\right\}_{V} =\Delta ^{2} {\rm exp}\left[-\frac{1}{\Lambda ^{2} } \left(x-x'\right)^{2} \right]\equiv F\left(x-x'\right).
+\left\{\Delta (x)\Delta (x')\right\}_{V} =\Delta ^{2} {\mathrm exp}\left[-\frac{1}{\Lambda ^{2} } \left(x-x'\right)^{2} \right]\equiv F\left(x-x'\right).
 \end{equation}
 
 С учетом волновых функций для квантовой проволоки \cite{Constantinou1989} $W_{\gamma \alpha } $ легко вычисляется и $\tau _{\alpha }^{-1} $ согласно \eqref{eq:31_140} принимает следующий вид:
 
 \begin{equation} \label{eq:31_290}
-\frac{1}{\tau _{\alpha } } =\frac{(\Delta \tilde{V}_{0} )^{2} m\Lambda \sqrt{\pi } }{\hbar ^{3} \left|k_{x} \right|} \left\{{\rm 1}+{\rm exp}\left[{\rm -}\left(k_{x} \Lambda \right)^{2} \right]\right\}.
+\frac{1}{\tau _{\alpha } } =\frac{(\Delta \tilde{V}_{0} )^{2} m\Lambda \sqrt{\pi } }{\hbar ^{3} \left|k_{x} \right|} \left\{{\mathrm 1}+{\mathrm exp}\left[{\mathrm -}\left(k_{x} \Lambda \right)^{2} \right]\right\}.
 \end{equation}
 
 Подставляя \eqref{eq:31_290} в \eqref{eq:31_150} и интегрируя по квазиимпульсу электрона $\hbar k_{x} $:
@@ -245,7 +245,7 @@ $$\delta =\frac{\beta _{0} \hbar ^{2} }{2m\Lambda ^{2} },$$
 Для вырожденного электронного газа искомая электропроводность (рассматривается нижайшая электронная зона) записывается в следующем виде:
 
 \begin{equation} \label{eq:31_310}
-\sigma _{xx}^{(d)} =\frac{4e^{2} \hbar \tilde{\xi }}{\pi ^{2} \sqrt{\pi } R_{0}^{2} m\left(\Delta \tilde{V}_{1} \right)^{2} \Lambda } \cdot \frac{{\rm 1}}{1+{\exp}(-q)} , q=\frac{2m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }.  
+\sigma _{xx}^{(d)} =\frac{4e^{2} \hbar \tilde{\xi }}{\pi ^{2} \sqrt{\pi } R_{0}^{2} m\left(\Delta \tilde{V}_{1} \right)^{2} \Lambda } \cdot \frac{{\mathrm 1}}{1+{\exp}(-q)} , q=\frac{2m\Lambda ^{2} }{\hbar ^{2} } \tilde{\xi }.  
 \end{equation}
 
 Как непосредственно следует из \eqref{eq:31_310} для вырожденных КП электропроводность, а следовательно и подвижность, при низких температурах не зависит от T (кривая 3 на рис. c). Такое поведение электропроводности от температуры экспериментально наблюдалось в КП Bi \cite{Lin2000,Heremans1998,Zhang2000,Heremans2000,Gitsu2003,Nikolaeva2006,Gitsu2005}.
@@ -277,7 +277,7 @@ $$\delta =\frac{\beta _{0} \hbar ^{2} }{2m\Lambda ^{2} },$$
 
 \begin{multline} \label{eq:31_350}
 \sigma _{xx} =\frac{e^{2} \hbar ^{3} }{\pi ^{2} m^{2} \left(\Delta \Lambda ^{2} V_{1} \right)^{2} L} \delta ^{2} \gamma \cdot \\
- \int _{0}^{\infty }d\tau \frac{\tau \cdot {\exp}\left(\delta \tau -\beta \tilde{\xi }\right)}{\left[\delta \gamma \cdot {\exp(}-\tau ){\rm I}_{{\rm 0}} (\tau )+1\right]\cdot \left[{\exp}\left(\delta \tau -\beta \tilde{\xi }\right)+1\right]^{2} },
+ \int _{0}^{\infty }d\tau \frac{\tau \cdot {\exp}\left(\delta \tau -\beta \tilde{\xi }\right)}{\left[\delta \gamma \cdot {\exp(}-\tau ){\mathrm I}_{{\mathrm 0}} (\tau )+1\right]\cdot \left[{\exp}\left(\delta \tau -\beta \tilde{\xi }\right)+1\right]^{2} },
 \end{multline}
   
 \[
@@ -287,7 +287,7 @@ $$\delta =\frac{\beta _{0} \hbar ^{2} }{2m\Lambda ^{2} },$$
 Для невырожденного электронного газа подвижность определяется соотношением:
 
 \begin{equation} \label{eq:31_360}
-\mu ^{(nd)} =\mu _{0} \cdot \delta ^{3} \gamma \int _{0}^{\infty }d\tau \frac{\tau \cdot {\rm exp(}-\tau \delta )}{\delta \gamma \cdot {\rm exp(}-\tau ){\rm I}_{{\rm 0}} (\tau )+1}. 
+\mu ^{(nd)} =\mu _{0} \cdot \delta ^{3} \gamma \int _{0}^{\infty }d\tau \frac{\tau \cdot {\mathrm exp(}-\tau \delta )}{\delta \gamma \cdot {\mathrm exp(}-\tau ){\mathrm I}_{{\mathrm 0}} (\tau )+1}. 
 \end{equation}
 
 Если $\delta \gamma <<1$, то из \eqref{eq:31_360} получается выражение для подвижности, связанное с рассеянием носителей на длинноволновых колебаниях:
@@ -300,7 +300,7 @@ $$\delta =\frac{\beta _{0} \hbar ^{2} }{2m\Lambda ^{2} },$$
 
 Для случая вырожденного электронного газа:
 \begin{equation} \label{eq:31_380}
-\sigma _{xx}^{(d)} =\frac{e^{2} \hbar ^{3} }{\pi ^{2} m^{2} \left(\Delta \Lambda ^{2} V_{1} \right)^{2} L} \cdot \frac{\delta \gamma \cdot \delta _{0} }{\delta \gamma \cdot {\rm I}_{{\rm 0}} \left(\delta _{0} \right){\rm exp}(-\delta _{0} )+1} ,
+\sigma _{xx}^{(d)} =\frac{e^{2} \hbar ^{3} }{\pi ^{2} m^{2} \left(\Delta \Lambda ^{2} V_{1} \right)^{2} L} \cdot \frac{\delta \gamma \cdot \delta _{0} }{\delta \gamma \cdot {\mathrm I}_{{\mathrm 0}} \left(\delta _{0} \right){\mathrm exp}(-\delta _{0} )+1} ,
 \end{equation}
 $n_{s} $ -- поверхностная плотность электронов, $\delta _{0} =\pi \Lambda ^{2} n_{s} $.
 
@@ -312,13 +312,13 @@ $n_{s} $ -- поверхностная плотность электронов, 
 Аналогичным образом можно вычислить электропроводность для квантовых проволок с бесконечным потенциалом, используя соотношения \eqref{eq:31_300}, \eqref{eq:31_340}:
 \begin{multline} \label{eq:31_400}
 \sigma _{xx} =\frac{2e^{2} \hbar ^{3} \delta ^{2} q}{m^{2} \pi ^{2} \sqrt{\pi } R_{0}^{2} \left(\Delta \Lambda V_{1} \right)^{2} \Lambda } \\
-\int _{0}^{\infty }d\tau \frac{\tau \cdot {\exp}\left(\delta \tau -\beta _{0} \tilde{\xi }\right)}{\left[\delta q\cdot \left({\rm exp(}-\tau )+1\right)+1\right]\cdot \left[{\exp}\left(\delta \tau -\beta _{0} \tilde{\xi }\right)+1\right]^{2} }, 
+\int _{0}^{\infty }d\tau \frac{\tau \cdot {\exp}\left(\delta \tau -\beta _{0} \tilde{\xi }\right)}{\left[\delta q\cdot \left({\mathrm exp(}-\tau )+1\right)+1\right]\cdot \left[{\exp}\left(\delta \tau -\beta _{0} \tilde{\xi }\right)+1\right]^{2} }, 
 \end{multline}
 \[\delta =\frac{\beta _{0} \hbar ^{2} }{2m\Lambda ^{2} } , q=\frac{m\rho \nu ^{2} \sqrt{\pi } \pi R_{0}^{2} }{2\hbar ^{2} E_{1}^{2} } \left(\Delta \Lambda V_{1} \right)^{2} \Lambda .\] 
 
 Для невырожденного электронного газа квантовой проволоки \eqref{eq:31_400} принимает вид:
 \begin{equation} \label{eq:31_410}
-\sigma _{xx}^{(nd)} =\frac{2e^{2} \hbar ^{3} n_{e} }{\pi m^{2} \left(\Delta \Lambda V_{1} \right)^{2} } q\delta ^{\frac{5}{2} } \int _{0}^{\infty }d\tau \frac{\tau \cdot \exp (-\delta \tau )}{\left[\delta q\cdot \left({\rm exp(}-\tau )+1\right)+1\right]}. 
+\sigma _{xx}^{(nd)} =\frac{2e^{2} \hbar ^{3} n_{e} }{\pi m^{2} \left(\Delta \Lambda V_{1} \right)^{2} } q\delta ^{\frac{5}{2} } \int _{0}^{\infty }d\tau \frac{\tau \cdot \exp (-\delta \tau )}{\left[\delta q\cdot \left({\mathrm exp(}-\tau )+1\right)+1\right]}. 
  \end{equation}
 
 При $\delta q<<1$ из \eqref{eq:31_410} непосредственно следует выражение для электропроводности, связанное с рассеянием электронов на длинноволновых (акустических) фононах:
@@ -340,7 +340,7 @@ $n_{s} $ -- поверхностная плотность электронов, 
 
 На рис. c приведена температурная зависимость подвижности (в относительных единицах) для различных концентраций носителей в прямоугольной КЯ. Для невырожденного электронного газа (кривая 1) подвижность немонотонным образом зависит от T, что экспериментально наблюдалось в КЯ GaAs/AlAs \cite{Sakaki1987}. Заметим, что с ростом ширины КЯ уменьшается влияние рассеяния носителей на шероховатости поверхности, поэтому максимум подвижности смещается в область низких температур. Кривые 2, 3 описывают температурную зависимость подвижности для вырожденного электронного газа. При низких T подвижность практически не зависит от температуры и с ее ростом уменьшается. Именно такое поведение подвижности от температуры экспериментально наблюдалось в инверсионных слоях Si для вырожденного электронного газа \cite{Stern1980}.
 
-\begin{figure}[H] 
+\begin{figure}[h] 
 	\center
 	\includegraphics [scale=1] {image31}
 	\captionsetup{labelformat=empty}
@@ -422,7 +422,7 @@ V_{\alpha } =\frac{4}{\left[4+\delta ^{2} \right]^{\frac{1}{2} } } \left[n+\frac
  
 Следовательно, в продольном магнитном поле, подвижность, увеличивается ($\mu _{x} \sim H^{2} $ ) и существенным образом зависит от радиуса квантовой проволоки ($\mu _{x} \sim R_{0}^{4} $). Если для невырожденного электронного газа  подвижность (21) увеличивается с ростом температуры, то для вырожденной размерно-квантовой проволоки подвижность при низких температурах не зависит от $T$. На рис. 1 представлена зависимость сопротивления (в относительных единицах) от напряженности магнитного поля с учетом рассеяния носителей на шероховатой поверхности (пунктирная линия).Сплошной линией представлена зависимость относительного сопротивления от магнитного поля для нанопроволок висмута с учетом рассеяния на поверхности и на акустических фононах именно, такая зависимость сопротивления от магнитного поля экспериментально наблюдалась в работе \cite{Nikolaeva2004}.
 
-\begin{figure}[H] 
+\begin{figure}[h] 
 	\center
 	\includegraphics [scale=1] {image32}
 	\captionsetup{labelformat=empty}
