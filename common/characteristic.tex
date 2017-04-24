@@ -55,8 +55,8 @@
 
 {\contribution} Автор принимал активное участие \ldots
 
-%\publications\ Основные результаты по теме диссертации изложены в ХХ печатных изданиях~\cite{Sokolov,Gaidaenko,Lermontov,Management},
-%Х из которых изданы в журналах, рекомендованных ВАК~\cite{Sokolov,Gaidaenko}, 
+%\publications\ Основные результаты по теме диссертации изложены в ХХ печатных изданиях~\cite{Sineavsky2006,Karapetyan2006,Karapetyan2011,Karapetyan2012,Solovenko2012,Karapetyan2014,Karapetyan2017},
+%Х из которых изданы в журналах, рекомендованных ВАК~\cite{Sineavsky2006,Karapetyan2006,Karapetyan2011,Karapetyan2012,Solovenko2012,Karapetyan2014,Karapetyan2017}, 
 %ХХ --- в тезисах докладов~\cite{Lermontov,Management}.
 
 \ifthenelse{\equal{\thebibliosel}{0}}{% Встроенная реализация с загрузкой файла через движок bibtex8
@@ -70,9 +70,9 @@
         \printbibliography[heading=countauthorvak, env=countauthorvak, keyword=biblioauthorvak, section=1]%
         \printbibliography[heading=countauthorconf, env=countauthorconf, keyword=biblioauthorconf, section=1]%
         \printbibliography[heading=countauthor, env=countauthor, keyword=biblioauthor, section=1]%
-        \publications\ Основные результаты по теме диссертации изложены в \arabic{citeauthor} печатных изданиях\nocite{bib1,bib2}, 
-        \arabic{citeauthorvak} из которых изданы в журналах, рекомендованных ВАК\nocite{vakbib1,vakbib2}, 
-        \arabic{citeauthorconf} "--- в тезисах докладов\nocite{confbib1,confbib2}.
+       % \publications\ Основные результаты по теме диссертации изложены в \arabic{citeauthor} печатных изданиях\nocite{Sineavsky2006,Karapetyan2006,Karapetyan2011,Karapetyan2012,Solovenko2012,Karapetyan2014,Karapetyan2017}, 
+        %\arabic{citeauthorvak} из которых изданы в журналах, рекомендованных ВАК\nocite{Sineavsky2006,Karapetyan2006,Karapetyan2011,Karapetyan2012,Solovenko2012,Karapetyan2014,Karapetyan2017}, 
+        %\arabic{citeauthorconf} "--- в тезисах докладов\nocite{confbib1,confbib2}.
     \end{refsection}
 }
 При использовании пакета \verb!biblatex! для автоматического подсчёта
