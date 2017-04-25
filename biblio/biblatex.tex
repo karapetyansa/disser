@@ -1,8 +1,8 @@
 %%% Реализация библиографии пакетами biblatex и biblatex-gost с использованием движка biber %%%
 
 %\usepackage{csquotes} % biblatex рекомендует его подключать. Пакет для оформления сложных блоков цитирования.
-
 %%% Загрузка пакета с основными настройками %%%
+\ifnumequal{\value{draft}}{0}{% Чистовик
 \usepackage[%
 backend=biber,% движок
 bibencoding=utf8,% кодировка bib файла
@@ -13,11 +13,23 @@ autolang=other,% многоязычная библиография
 clearlang=true,% внутренний сброс поля language, если он совпадает с языком из babel/polyglossia
 defernumbers=true,% нумерация проставляется после двух компиляций, зато позволяет выцеплять библиографию по ключевым словам и нумеровать не из большего списка
 sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
-%doi=false,% Показывать или нет ссылки на DOI
 url=false,
-%isbn=false,% Показывать или нет ISBN
-]{biblatex}[2014/06/25]
+doi=true,% Показывать или нет ссылки на DOI
+isbn=false,% Показывать или нет ISBN, ISSN, ISRN
+]{biblatex}[2016/09/17]%
+}{%Черновик
+\usepackage[%
+backend=biber,% движок
+bibencoding=utf8,% кодировка bib файла
+sorting=none,% настройка сортировки списка литературы
+]{biblatex}[2016/09/17]%
+}
 
+%%% Подключение файлов bib %%%
+\addbibresource[label=other]{biblio/othercites.bib}
+\addbibresource[label=vak]{biblio/authorpapersVAK.bib}
+\addbibresource[label=papers]{biblio/authorpapers.bib}
+\addbibresource[label=conf]{biblio/authorconferences.bib}
 
 
 %http://tex.stackexchange.com/a/141831/79756
@@ -28,6 +40,13 @@ url=false,
         \map{% перекидываем значения полей language в поля langid, которыми пользуется biblatex
             \step[fieldsource=language, fieldset=langid, origfieldval, final]
             \step[fieldset=language, null]
+        }
+        \map[overwrite]{% стираем значения всех полей addendum
+            \perdatasource{biblio/authorpapersVAK.bib}
+            \perdatasource{biblio/authorpapers.bib}
+            \perdatasource{biblio/authorconferences.bib}
+            \step[fieldsource=addendum, final]
+            \step[fieldset=addendum, null] %чтобы избавиться от информации об объёме авторских статей, в отличие от автореферата
         }
         \map{% перекидываем значения полей numpages в поля pagetotal, которыми пользуется biblatex
             \step[fieldsource=numpages, fieldset=pagetotal, origfieldval, final]
@@ -86,8 +105,9 @@ url=false,
     }
 }
 
-%%% Убираем неразрывные пробелы перед двоеточем и точкой с запятой %%%
+%%% Убираем неразрывные пробелы перед двоеточием и точкой с запятой %%%
 %\makeatletter
+%\ifnumequal{\value{draft}}{0}{% Чистовик
 %    \renewcommand*{\addcolondelim}{%
 %      \begingroup%
 %      \def\abx@colon{%
@@ -95,7 +115,7 @@ url=false,
 %        \abx@puncthook{:}\space}%
 %      \addcolon%
 %      \endgroup}
-%    
+%
 %    \renewcommand*{\addsemicolondelim}{%
 %      \begingroup%
 %      \def\abx@semicolon{%
@@ -103,10 +123,11 @@ url=false,
 %        \abx@puncthook{;}\space}%
 %      \addsemicolon%
 %      \endgroup}
+%}{}
 %\makeatother
 
-
 %%% Правка записей типа thesis, чтобы дважды не писался автор
+%\ifnumequal{\value{draft}}{0}{% Чистовик
 %\DeclareBibliographyDriver{thesis}{%
 %  \usebibmacro{bibindex}%
 %  \usebibmacro{begentry}%
@@ -135,16 +156,18 @@ url=false,
 %  \usebibmacro{related:init}%
 %  \usebibmacro{related}%
 %  \usebibmacro{finentry}}
-
+%}{}
 
 %\newbibmacro{string+doi}[1]{% новая макрокоманда на простановку ссылки на doi
 %    \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
-%
+
+%\ifnumequal{\value{draft}}{0}{% Чистовик
 %\renewcommand*{\mkgostheading}[1]{\usebibmacro{string+doi}{#1}} % ссылка на doi с авторов. стоящих впереди записи
 %\renewcommand*{\mkgostheading}[1]{#1} % только лишь убираем курсив с авторов
+%}{}
 %\DeclareFieldFormat{title}{\usebibmacro{string+doi}{#1}} % ссылка на doi с названия работы
 %\DeclareFieldFormat{journaltitle}{\usebibmacro{string+doi}{#1}} % ссылка на doi с названия журнала
-% Убрать тире из разделителей элементов в библиографии:
+%%% Убрать тире из разделителей элементов в библиографии:
 %\renewcommand*{\newblockpunct}{%
 %    \addperiod\space\bibsentence}%block punct.,\bibsentence is for vol,etc.
 
@@ -154,11 +177,29 @@ url=false,
 %}
 %\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\space\url{#1}}
 
+%%% В списке литературы обозначение одной буквой диапазона страниц англоязычного источника %%%
+\DefineBibliographyStrings{english}{%
+    pages = {p\adddot} %заглавность буквы затем по месту определяется работой самого biblatex
+}
+
+%%% В ссылке на источник в основном тексте с указанием конкретной страницы обозначение одной большой буквой %%%
+%\DefineBibliographyStrings{russian}{%
+%    page = {C\adddot}
+%}
+
 %%% Исправление длины тире в диапазонах %%%
 %\DefineBibliographyExtras{russian}{%
 %  \protected\def\bibrangedash{%
-%    \textendash\penalty\hyphenpenalty}% breakable dash, такой же как для английского языка
+%    \textendash\penalty\value{abbrvpenalty}}% almost unbreakable dash
+%  \protected\def\bibdaterangesep{\bibrangedash}%тире для дат
 %}
+
+%Set higher penalty for breaking in number, dates and pages ranges
+\setcounter{abbrvpenalty}{10000} % default is \hyphenpenalty which is 12
+
+%Set higher penalty for breaking in names
+\setcounter{highnamepenalty}{10000} % If you prefer the traditional BibTeX behavior (no linebreaks at highnamepenalty breakpoints), set it to ‘infinite’ (10 000 or higher).
+\setcounter{lownamepenalty}{10000}
 
 %%% Set low penalties for breaks at uppercase letters and lowercase letters
 %\setcounter{biburllcpenalty}{500} %управляет разрывами ссылок после маленьких букв RTFM biburllcpenalty
@@ -184,13 +225,6 @@ url=false,
 %  }
 %  {\endlist}
 %  {\item}
-
-%%% Подключение файлов bib %%%
-\addbibresource{biblio/othercites.bib}
-\addbibresource{biblio/authorpapersVAK.bib}
-\addbibresource{biblio/authorpapers.bib}
-\addbibresource{biblio/authorconferences.bib}
-
 
 %% Счётчик использованных ссылок на литературу, обрабатывающий с учётом неоднократных ссылок
 %http://tex.stackexchange.com/a/66851/79756
@@ -252,8 +286,9 @@ url=false,
 \makeatother
 \defbibheading{countauthor}{}
 
-
-
+\defbibheading{authorpublications}[\authorbibtitle]{\section*{#1}}
+\defbibheading{pubsubgroup}{\noindent\textbf{#1}}
+\defbibheading{otherpublications}{\section*{#1}}
 
 
 %%% Создание команд для вывода списка литературы %%%
@@ -263,12 +298,18 @@ url=false,
 }
 
 \newcommand*{\insertbiblioauthor}{
-\printbibliography[keyword=biblioauthor,section=1,title=\authorbibtitle]
-\printbibliography[heading=counter,env=counter,keyword=biblioauthor,section=1]
+\printbibliography[heading=authorpublications,keyword=biblioauthor,section=1,title=\authorbibtitle]
+}
+\newcommand*{\insertbiblioauthorimportant}{
+\printbibliography[heading=authorpublications,keyword=biblioauthor,section=2,title={Наиболее значимые \MakeLowercase{\protect\authorbibtitle{}}}]
+}
+\newcommand*{\insertbiblioauthorgrouped}{% Заготовка для вывода сгруппированных печатных работ автора. Порядок нумерации определяется в соответствующих счетчиках внутри окружения refsection в файле common/characteristic.tex
+\section*{\authorbibtitle}
+\printbibliography[heading=pubsubgroup, keyword=biblioauthorvak, section=1,title=\vakbibtitle]%
+\printbibliography[heading=pubsubgroup, keyword=biblioauthorconf, section=1,title=\confbibtitle]%
+\printbibliography[heading=pubsubgroup, keyword=biblioauthornotvak, section=1,title=\notvakbibtitle]%
 }
 
 \newcommand*{\insertbiblioother}{
-\printbibliography[keyword=biblioother]
-\printbibliography[heading=counter,env=counter,keyword=biblioother]
+\printbibliography[heading=otherpublications,keyword=biblioother]
 }
-
