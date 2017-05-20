@@ -19,6 +19,7 @@
 !Dissertation/part2.tex
 !Dissertation/part3.tex
 !Dissertation/part4.tex
+!Dissertation/conclusion.tex
 
 !biblio/biblatex.tex
 !biblio/othercites.bib
@@ -28,6 +29,7 @@
 
 !common/characteristic.tex
 !common/data.tex
+!common/concl.tex
 
 !images/*
 
