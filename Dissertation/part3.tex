@@ -4,17 +4,17 @@
 
 Квантовые системы с пониженной размерностью (квантовые ямы (КЯ), сверхрешетки, квантовые проволоки (КП)) благодаря их уникальным свойствам, связанным с возникновением размерного квантования, продолжают привлекать внимание теоретиков и экспериментаторов. При этом кинетические явления в размерно-квантованных системах принципиальным образом отличаются от объемных материалов. Так, например, в объемных материалах сопротивление растет с увеличением температуры $T$, а в КП малого диаметра $d$ ($d \sim 70 \AA$) убывает, оставаясь практически постоянным в области низких $T$ \cite{Lin2000,Lin2003,Heremans1998,Zhang2000,Heremans2000}. Для КЯ GaAs/AlAs температурная зависимость подвижности $\mu (T)$ может носить не монотонный характер: в области низких температур (T$>$10K) $\mu (T)$ увеличивается с ростом T, а при $T>100K$ начинает уменьшаться \cite{Lin2000,Sakaki1987}. Следовательно, размеры квантовых систем принципиальным образом могут влиять на величину и температурную зависимость электропроводности.
 
-В данной диссертационной работе делается попытка объяснить особенности температурной зависимости электропроводности, экспериментально наблюдаемые в нелегированных наноструктурах, учитывая процессы рассеяния носителей на шероховатой поверхности и на фононах. Именно из сравнения теоретических результатов с экспериментальными данными по температурной зависимости электропроводности можно провести оценки параметров флуктуирующей поверхности. Учет двух механизмов рассеяния позволил сформулировать условия на ширину размерно-ограниченной системы и температуру, когда рассеяние электронов на фононах преобладает над поверхностным рассеянием.
+В данной диссертационной работе делается попытка объяснить особенности температурной зависимости электропроводности, экспериментально наблюдаемые в нелегированных наноструктурах, учитывая процессы рассеяния носителей на шероховатой поверхности и на фононах. Именно из сравнения теоретических результатов с экспериментальными данными по температурной зависимости электропроводности можно провести оценки параметров флуктуирующей поверхности. Учет двух механизмов рассеяния позволил сформулировать условия на ширину размерно-ограниченной системы и температуру, когда рассеяние электронов на фононах преобладает над рассеянием носителей на шероховатой поверхности.
 
-Расчет электропроводности проводится согласно формуле Кубо \cite{Kubo1957a} для статической электропроводности, которая в представлении вторичного квантования имеет вид\footnote{ Полученное выражение для электропроводности справедливо для любых квантовых систем в произвольном магнитном поле. Единственное ограничение -- это малость электрического поля, т.е. область применимости закона Ома.}:
+Расчет электропроводности проводится согласно формуле Кубо \cite{Kubo1957a} для статической электропроводности, которая в представлении вторичного квантования имеет вид \footnote{ Полученное выражение для электропроводности справедливо для любых квантовых систем в произвольном магнитном поле. Единственное ограничение -- это малость электрического поля, т.е. область применимости закона Ома.}:
 \begin{equation} \label{eq:31_10}
 \sigma _{ij} =\frac{\beta _{0} e^{2} }{2Vm^{2} } \sum _{\alpha ,\beta ,\alpha _{1} ,\beta _{1} }\hat{p}_{\alpha \beta }^{(i)} \hat{p}_{\alpha _{1} \beta }^{(j)} \int _{-\infty }^{\infty }dt\left\langle a_{\alpha }^{+} (t)a_{\beta } (t)a_{\alpha _{1} }^{+} a_{\beta _{1} } \right\rangle
 \end{equation} 
 $\hat{p}_{\alpha \beta }^{(i)} $ -- матричный элемент оператора импульса на сглаженных волновых функциях зонного электрона, $\beta _{0} =1/k_{0} T$, $\alpha $ -- квантовые числа, описывающие состояние заряженной частицы с эффективной массой m, $V$ -- объем основной области системы,
 \[
-a_{\alpha }^{+} (t)={\mathrm exp}\left(\frac{it\hat{H}}{\hbar } \right)a_{\alpha }^{+} {\mathrm exp}\left(-\frac{it\hat{H}}{\hbar } \right),
+a_{\alpha }^{+} (t)= \exp\left(\frac{it\hat{H}}{\hbar } \right)a_{\alpha }^{+} \exp\left(-\frac{it\hat{H}}{\hbar } \right),
 \] 
-$\left\langle \cdot \cdot \cdot \right\rangle $ -- описывает усреднение по системе равновесных электронов и по реализации случайного процесса
+$\left\langle \cdot \cdot \cdot \right\rangle $ -- описывает усреднение по системе равновесных электронов и по реализации случайного процесса.
 
 Гамильтониан для электрона, взаимодействующего с шероховатой поверхностью размерно-ограниченной системы в представлении вторичного квантования записывается в виде:
 \begin{equation} \label{eq:31_20}
@@ -22,45 +22,113 @@ $\left\langle \cdot \cdot \cdot \right\rangle $ -- описывает усред
 \end{equation}
 $\hat{V}$ -- оператор взаимодействия носителя с энергией $\varepsilon _{\alpha } $ с поверхностью системы, ${\left| \alpha  \right\rangle} $ -- волновая функция зонного электрона.
 
-Если учесть временную зависимость операторов рождения уничтожения (\dots .) в \eqref{eq:31_10}, то после усреднения с матрицей плотности удовлетворяющей уравнению нейтральности с гамильтонианом ${\hat{H}}_0$ нетрудно получить:
-\begin{multline} \label{eq:31_30}
-{\sigma }_{ij}=\frac{{\beta }_0 e^2}{2Vm^2_e}\sum_{\alpha \alpha _1\beta \beta_1}{{\hat{P}}^{\left(i\right)}_{\alpha {\alpha }_1}{\hat{P}}^{\left(j\right)}_{\beta {\beta }_1}n_{{\beta }_1}\left(1-n_{\beta }\right)}\\
-\int^{\infty }_{-\infty }{d t {\left\{\left\langle {\beta }_1\left|e^{\frac{it}{\hbar }\left(H_0+V\right)}\right|\alpha \right\rangle \left\langle {\alpha }_1\left|e^{\frac{i t}{\hbar }\left(H_0+V\right)}\right|\beta \right\rangle \right\}}_V}
+С гамильтонианом \eqref{eq:31_20} расчет временной зависимости операторов
+рождения $a_\alpha ^ + (t)$ и уничтожения $a_\alpha (t)$ можно
+провести точно по аналогии \cite{Khamidullin2002}. В результате
+\begin{equation}
+\begin{array}{c}\label{eq:31_23}
+\displaystyle a_\alpha ^ + (t) = \exp\left(
+{\frac{it\varepsilon _\alpha }{\hbar }} \right)\sum\limits_\beta
+{a_\beta ^ + \left\langle \beta \right|} \exp\left[
+{\frac{it}{\hbar }\left( {\hat {H}_0 + V} \right)}
+\right]\exp\left( { - \frac{it}{\hbar }\hat {H}_0 }
+\right)\left| \alpha \right\rangle ,\\
+\displaystyle a_\alpha (t) = \exp\left( { - \frac{it\varepsilon
+		_\alpha }{\hbar }} \right)\sum\limits_\beta {\left\langle \alpha
+	\right|} \exp\left( {\frac{it}{\hbar }\hat {H}_0 }
+\right)\exp\left[ { - \frac{it}{\hbar }\left( {\hat {H}_0 + V}
+	\right)} \right]\left| \beta \right\rangle a_\beta .
+\end{array},
+\end{equation}
+здесь обозначено: $\hat {H}_0 $ -- гамильтониан для свободных
+носителей в координатном представлении ($\hat {H}_0 \left| \alpha
+\right\rangle = \varepsilon _\alpha \left| \alpha \right\rangle
+$).
+
+Если подставить \eqref{eq:31_23}  в \eqref{eq:31_10}, выражение для
+электропроводности принимает следующий вид:
+\begin{multline}
+\displaystyle\sigma_{ij}=\frac{\beta_0e^2}{2Vm^2}\sum\limits_{\alpha
+	,\beta ,\alpha _1 ,\beta _1, \atop \gamma ,\gamma _1 } \hat
+{p}_{\alpha \beta}^{(i)} \hat {p}_{\alpha _1 \beta
+	_1}^{(j)}\int\limits_{- \infty }^\infty {dt \left\{ \left\langle
+	\gamma \right|\exp\left[\frac{it}{\hbar}\left(\hat
+	{H}_0 + V\right)\right]\left|\alpha\right\rangle \right.}\times\\
+\times\displaystyle\left.\left\langle \beta
+\right|\exp\left[-\frac{it}{\hbar}\left(\hat {H}_0 +
+V\right)\right]\left|\gamma_1\right\rangle\right\}_V \left\langle
+{a_\alpha ^ + a_{\gamma _1 } a_{\alpha _1 }^ + a_{\beta _1 } }
+\right\rangle _0,
 \end{multline}
-${\left\{\cdots \right\}}_V$~---~описывает усреднение по реализации случайного процесса $\Delta \left(x,y\right)$, $n_{\beta }$~---~равновесная функция распределения Ферми-Дирака для электронов с энергией $E_{\alpha }$ .
+$\left\langle
+{...} \right\rangle _0 $-- усреднение с равновесной матрицей
+плотности для электронов.
 
-В дальнейшем проведем усреднение для матричных элементов в \eqref{eq:31_30} независимо. Такое приближение соответствует приближению «времени релаксации» \cite{Khamidullin2002} и конечные результаты для кинетических коэффициентов будут вероятно отличаться от тех, которые получаются при использовании решения классического уравнения Больцмана. Далее этот вопрос будет детально обсуждать.
+Согласно теореме Вика:
+\begin{equation}\label{eq:31_26}
+\left\langle {a_\gamma ^ + a_{\gamma _1 } a_{\alpha _1
+	}^ + a_{\beta _1 } } \right\rangle _0 = n_\gamma \left( {1 -
+	n_{\gamma _1 } } \right)\delta _{\gamma \beta _1 } \delta _{\gamma
+	_1 \alpha _1 } + n_\gamma n_{\alpha _1 } \delta _{\gamma \gamma _1
+} \delta _{\alpha _1 \beta _1 } ,
+\end{equation}
+$n_\alpha = \left\{ {\exp\left[ {\beta \left( {\varepsilon _\alpha
+			- \xi } \right)} \right] + 1} \right\}^{ - 1}$-- равновесная
+функция распределения для электронов с энергией $\varepsilon _\alpha$, $\xi $ -- химический
+потенциал.
 
-\noindent Рассмотрим функцию
+С учетом первого слагаемого \eqref{eq:31_26} диагональный тензор
+электропроводности описывается соотношением:
+\begin{multline}\label{eq:31_30}
+\displaystyle\sigma_{ij}=\frac{\beta_0 e^2}{2Vm_e^2}
+\sum\limits_{\alpha,\beta ,\beta_1 ,\alpha_1 } \hat {p}_{\alpha \beta}^{(i)} \hat{p}_{\alpha_1 \beta_1}^{(j)}
+n_{\beta_1} \left( 1 - n_{\alpha_1}\right)\times\\
+\times\int\limits_{- \infty }^\infty {dt
+	\left\{ \left\langle\beta_1 \right|
+	\exp\left[\frac{it}{\hbar}\left(\hat{H}_0 + V\right)\right]
+	\left|\alpha\right\rangle \right.}
+\displaystyle\left.\left\langle \beta\right|\exp\left[-\frac{it}{\hbar}\left(\hat {H}_0 + V\right)\right]
+\left|\alpha_1\right\rangle\right\}_V
+\end{multline}
+${\left\{\cdots \right\}}_V$~---~описывает усреднение по реализации случайного процесса $\Delta \left(x,y\right)$.
+
+В дальнейшем проведем усреднение для матричных элементов в \eqref{eq:31_30} независимо. Такое приближение соответствует приближению «времени релаксации» \cite{Khamidullin2002} и конечные результаты для кинетических коэффициентов будут вероятно отличаться от тех, которые получаются при использовании решения классического уравнения Больцмана. 
+
+Рассмотрим функцию
 \begin{multline} \label{eq:31_40}
-y_{{\beta }_1\alpha }=e^{-\frac{it}{\hbar }E_{{\beta }_1}}{\left\{\left\langle {\beta }_1\left|e^{\frac{it}{\hbar }\left(H_0+V\right)}\right|\alpha \right\rangle \right\}}_V=\\
-={\left\{\left\langle {\beta }_1\left|T{{\exp}_{[-]} \left[\frac{i}{\hbar }\int^{\infty }_0{V\left(\tau \right)d \tau }\right]\ }\right|\alpha \right\rangle \right\}}_V
+y_{{\beta }_1\alpha }=\exp\left(-\frac{it}{\hbar }E_{\beta_1}\right){\left\{\left\langle {\beta }_1\left|\exp\left[ {\frac{it}{\hbar }\left( {\hat {H}_0 + V} \right)} \right]\right|\alpha \right\rangle \right\}}_V=\\
+={\left\{\left\langle {\beta }_1\left|T{{\exp}_{[-]} \left[\frac{i}{\hbar }\int^{\infty }_0{V\left(\tau \right)d \tau }\right]\ }\right|\alpha \right\rangle \right\}}_V,
 \end{multline}
-
-\noindent Здесь обозначено
+здесь обозначено:
 \[
-T{{\exp}_{\left[-\right]} \left[\frac{i}{\hbar }\int^{\infty }_0{V\left(\tau \right)d \tau }\right]\ }=e^{-\frac{it}{\hbar }H_0}e^{\frac{it}{\hbar }\left(H_0+V\right)},\ \ V\left(\tau \right)=e^{-\frac{i\tau }{\hbar }H_0}Ve^{\frac{i\tau }{\hbar }\left(H_0\right)}
+T{\exp_{\left[-\right]} \left[\frac{i}{\hbar }\int\limits^{\infty }_0 {V\left(\tau \right)d \tau } \right]}
+	=\exp\left( {-\frac{it}{\hbar }\hat {H}_0 }\right)\exp\left[ {\frac{it}{\hbar }\left( {\hat {H}_0 + V} \right)} \right],
 \] 
-Усреднение по реализации случайного процесса в \eqref{eq:31_40} проведем с использованием кумулянтного усреднения \cite{Kubo1957a}. Тогда, выражение \eqref{eq:31_40} с точностью до второй кумулянты \eqref{eq:31_40} принимает следующий вид:
-\begin{equation} \label{eq:31_50}
-y_{{\beta }_1\alpha }\left(t\right)=\left\langle {\beta }_1\left|{exp \left\{-\frac{1}{{\hbar }^2}\int^t_0{d \tau \int^{\tau }_0{d {\tau }_1{\left\{V\left({\tau }_1\right)V\left(\tau \right)\right\}}_V}}\right\}\ }\right|\alpha \right\rangle
-\end{equation} 
-
-\noindent Не трудно показать, что
+\[
+V(\tau ) = \exp\left( {\frac{i\tau \hat {H}_0 }{\hbar }}\right)
+V\exp\left( { - \frac{i\tau \hat {H}_0 }{\hbar }} \right).
+\]
+Усреднение по реализации случайного процесса в \eqref{eq:31_40} проведем с использованием кумулянтного усреднения \cite{Kubo1957a}. Тогда, выражение \eqref{eq:31_40} с точностью до второй кумулянты принимает следующий вид:
+\[
+y_{{\beta }_1\alpha }\left(t\right)=\left\langle {\beta }_1\left|{\exp \left\{-\frac{1}{{\hbar }^2}\int^t_0{d \tau \int^{\tau }_0{d {\tau }_1{\left\{V\left({\tau }_1\right)V\left(\tau \right)\right\}}_V}}\right\}\ }\right|\alpha \right\rangle
+\]
+Не трудно показать, что
 \begin{equation} \label{eq:31_60}
 {\dot{y}}_{{\beta }_1\alpha }\left(t\right)=-\frac{1}{{\hbar }^2}\int^t_0{d \tau \sum_{\gamma }{\left\langle {\beta }_1\left|{\left\{V\left({\tau }_1\right)V\left(t\right)\right\}}_V\right|\gamma \right\rangle y_{\gamma \alpha }\left(t\right)}}
 \end{equation} 
-
-\noindent Дальнейшие расчеты проводятся в диагональном приближении, так как процессы рассеяния носителей на шероховатой поверхности являются упругими и происходят в основном в одной размерно-квантованной зоне проводимости. Решение дифференциального уравнения \eqref{eq:31_60} в диагональном приближении $\gamma ={\beta }_1$ с начальным условием $y_{{\beta }_1\alpha }\left(0\right)={\delta }_{{\beta }_1\alpha }$ записывается следующим образом:
+Дальнейшие расчеты проводятся в диагональном приближении, так как процессы рассеяния носителей на шероховатой поверхности являются упругими и происходят в основном в одной размерно-квантованной зоне проводимости. Решение дифференциального уравнения \eqref{eq:31_60} в диагональном приближении $\gamma ={\beta }_1$ с начальным условием $y_{{\beta }_1\alpha }\left(0\right)={\delta }_{{\beta }_1\alpha }$ записывается следующим образом:
 \begin{equation} \label{eq:31_70}
 y_{{\beta }_1\alpha }\left(t\right)=\exp \left\{-\frac{1}{{\hbar }^2}\int^t_0{d \tau \int^{\tau }_0{d {\tau }_1\left\langle {\beta }_1\left|{\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right|{\beta }_1\right\rangle }}\right\}{\delta }_{{\beta }_1\alpha }
 \end{equation} 
 
-\noindent Не трудно показать (см. \S 2 гл. 1 \ref{sect1_2}), что
+\noindent Не трудно показать, что
 \begin{equation} \label{eq:31_80}
 \left\langle {\beta }_1\left|{\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right|{\beta }_1\right\rangle =\sum_{\gamma }{W_{{\beta }_1\gamma }\exp \left[\frac{i}{\hbar }\left({\tau }_1-\tau \right)\left({\varepsilon }_{{\beta }_1}-{\varepsilon }_{\gamma }\right)\right]\ }
-\end{equation} 
-Если подставить \eqref{eq:31_70} в \eqref{eq:31_60} и провести интегрирование по $\tau ,{\tau }_1$, в результате получаем
+\end{equation}
+\[
+W_{\alpha\beta}=\int{d\vect{r} d\vect{r_1} \Psi^*_\alpha(\vect{r}) \Psi^*_\beta(\vect{r_1}) V_\alpha V_\beta F \Psi_\alpha(\vect{r_1}) \Psi_\beta(\vect{r})}
+\] 
+Если подставить \eqref{eq:31_80} в \eqref{eq:31_70} и провести интегрирование по $\tau ,{\tau }_1$, в результате получаем
 
 \begin{equation} \label{eq:31_90}
 y_{{\beta }_1\alpha }\left(t\right)=\exp \left\{g_{\alpha }\left(t\right)\right\}{\delta }_{{\beta }_1\alpha}
@@ -68,18 +136,17 @@ y_{{\beta }_1\alpha }\left(t\right)=\exp \left\{g_{\alpha }\left(t\right)\right\
 
 \begin{multline} \label{eq:31_100}
 g_{\alpha }\left(t\right)=-2\sum_{\gamma }{W_{\alpha \gamma }\frac{{{\sin}^2 \frac{t}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)\ }}{{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}^2}}+\\
-+i\sum_{\gamma }{\frac{W_{\alpha \gamma }}{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}}\left\{\frac{t}{\hbar }-\frac{1}{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}{\sin \frac{t}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)\ }\right\} \notag	
++i\sum_{\gamma }{\frac{W_{\alpha \gamma }}{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}}\left\{\frac{t}{\hbar }-\frac{1}{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}{\sin \frac{t}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)\ }\right\}.	
 \end{multline}
-Первое слагаемое в $g_{\alpha }\left(t\right)$ связано с квантово-механической вероятностью перехода носителя под влиянием возмущения $V$ [{\color{red}???}]; второе слагаемое, в частности, определяет изменение энергии электрона под влиянием возмущения $V$.
-Если \eqref{eq:31_90} и $y_{{\alpha }_1\beta }\left(\_t\right)$ подставить в \eqref{eq:31_30}, то электропроводность можно записать в виде
+Первое слагаемое в $g_{\alpha }\left(t\right)$ связано с квантово-механической вероятностью перехода носителя в единицу времени под влиянием возмущения $V$; второе слагаемое, в частности, определяет сдвиг энергии электрона под влиянием возмущения $V$.
+Подставляя \eqref{eq:31_90} в \eqref{eq:31_30} электропроводность можно записать в виде:
 \begin{equation} \label{eq:31_110}
-{\sigma }_{ij}=\frac{{\beta }_0e^2}{2Vm^2_e}\sum_{\alpha \beta }{{\hat{P}}^{\left(i\right)}_{\alpha \beta }{\hat{P}}^{\left(j\right)}_{\beta \alpha }n_{\alpha }\left(1-n_{\beta }\right)}\int^{\infty }_{-\infty }{d te^{\frac{it}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\beta }\right)}\exp \left[g_{\alpha }\left(t\right)+g_{\beta }\left(\_t\right)\right]}
+{\sigma }_{ij}=\frac{{\beta }_0e^2}{2Vm^2_e}\sum_{\alpha \beta }{{\hat{P}}^{\left(i\right)}_{\alpha \beta }{\hat{P}}^{\left(j\right)}_{\beta \alpha }n_{\alpha }\left(1-n_{\beta }\right)}\int^{\infty }_{-\infty }{d te^{\frac{it}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\beta }\right)}\exp \left[g_{\alpha }\left(t\right)+g_{\beta }\left(t\right)\right]}.
 \end{equation} 
-
-\noindent Если рассматривать упругое рассеяние в одной зоне и учесть, что в дальнейшем рассматриваем кинетические процессы с ${\hat{P}}_{\alpha \beta }\sim {\delta }_{\alpha \beta }$, то \eqref{eq:31_110} можно представить в виде $(i=j)$:
+Если рассматривать упругое рассеяние в одной зоне и учесть, что в дальнейшем рассматриваем кинетические процессы с ${\hat{P}}_{\alpha \beta }\sim {\delta }_{\alpha \beta }$, то \eqref{eq:31_110} можно представить в виде $(i=j)$:
 
 \begin{multline} \label{eq:31_120}
-{\sigma }_{ij}=\frac{{\beta }_0e^2}{2Vm^2_e}\sum_{\alpha }{{\left|{\hat{P}}^i_{\alpha \alpha }\right|}^2 n_{\alpha }\left(1-n_{\alpha }\right)}\\
+{\sigma }_{ii}=\frac{{\beta }_0e^2}{2Vm^2_e}\sum_{\alpha }{{\left|{\hat{P}}^i_{\alpha \alpha }\right|}^2 n_{\alpha }\left(1-n_{\alpha }\right)}\\
 \int^{\infty }_{-\infty }{d t{\exp \left[-\sum_{\gamma }{W_{\alpha \gamma }\frac{4{{\sin}^2 \frac{t}{\hbar }\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)\ }}{{\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}^2}}\right]}}
 \end{multline}
 При $t\to \infty $, {\color{red}когда можно ввести понятие о независящей от времени вероятности перехода [???]}, то
@@ -89,7 +156,7 @@ g_{\alpha }\left(t\right)=-2\sum_{\gamma }{W_{\alpha \gamma }\frac{{{\sin}^2 \fr
 \end{equation}
  
 \begin{equation} \label{eq:31_140}
-\frac{1}{{\tau }_{\alpha }}=\sum_{\gamma }{W_{\alpha \gamma }\delta \left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}
+\frac{1}{\tau_{\alpha}}=\frac{2\pi}{\hbar} \sum_{\gamma }{W_{\alpha \gamma }\delta \left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}
 \end{equation}
 
 
