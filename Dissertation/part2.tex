@@ -179,27 +179,28 @@ $\left\langle {\alpha }_c\mathrel{\left|\vphantom{{\alpha }_c {\alpha }_v}\right
 \] 
 соотношение  \eqref{eq:23_30} записывается в виде $\left(L_0\left(z\right)=1\right)$:
 \begin{equation} \label{eq:23_40}
-K\left(\Omega\right)=K_0\sum_{nm}{{\left|\left\langle {\alpha }_c\mathrel{\left|\vphantom{{\alpha }_c {\alpha }_v}\right.\kern-\nulldelimiterspace}{\alpha }_v\right\rangle \right|}^2}2{\left[\frac{2\pi {\mu }^*{\omega }_f}{\hbar a}\right]}^{\frac{1}{2}}Re\int^{\infty }_0{dx}e^{f^2\left(x\right)}\left[1-\Phi \left(f\left(x\right)\right)\right]
+K\left(\Omega\right)=K_0\sum_{nm}{ {\lvert\langle \alpha_c | \alpha_v \rangle\rvert}^2 {\left[\frac{8\pi {\mu }^*{\omega }_f}{\hbar a}\right]}^{\frac{1}{2}} \mathrm{Re} \int\limits_{0}^\infty {dx e^{f^2\left(x\right)}\left[1-\Phi \left(f\left(x\right)\right)\right]}}
 \end{equation}
+\[
+\Phi \left(z\right)=\frac{2}{\sqrt{\pi }}\int\limits_{0}^z {e^{-{\tau}^2}}d\tau ,
+\] 
+\[
+f\left(x\right)={\left(\frac{{\omega }^2_f}{4a}\right)}^{\frac{1}{2}}\frac{1}{x}\left[1-ix\left(\frac{\Delta }{\hbar {\omega }_f}-x^2\right)\right],\ \ \Delta =\hbar \Omega-E^*_g .
+\] 
 
-\[
-\Phi \left(z\right)=\frac{2}{\sqrt{\pi }}\int^z_0{e^{-{\tau }^2}}d\tau ,
-\] 
-\[
-f\left(x\right)={\left(\frac{{\omega }^2_f}{4a}\right)}^{\frac{1}{2}}\frac{1}{x}\left[1-ix\left(\frac{\Delta }{\hbar {\omega }_f}-x^2\right)\right],\ \ \Delta =\hbar \Omega-E^*_g
-\] 
 В отсутствии лазерного излучения $(a=0)$ из \eqref{eq:23_40} при ${{\omega }^2_f}/{4a}\gg 1$ можно получить выражение для коэффициента межзонного поглощения света в нанопроволоках в однородном магнитном поле \cite{Kostyukevich2015}. Если же ${{\omega }^2_f}/{4a}\ll 1$, то форма линии межзонного поглощения света (высота, полуширина) полностью определяется интенсивностью лазерного излучения, и коэффициент поглощения света согласно \eqref{eq:23_40} записывается следующим образом 
 \begin{equation} \label{eq:23_50}
-K\left(\Omega\right)=K_0{\left|\left\langle {\alpha }_c\mathrel{\left|\vphantom{{\alpha }_c {\alpha }_v}\right.\kern-\nulldelimiterspace}{\alpha }_v\right\rangle \right|}^22{\left[\frac{2\pi {\mu }^*}{{\hbar }^2a}\right]}^{\frac{1}{2}}e^{-\frac{{\Delta }^2}{4a{\hbar }^2}}\int^{\infty }_0{dx}e^{-\frac{x^4}{4a{\hbar }^2}+\frac{{\Delta x}^2}{2a{\hbar }^2}}
+K\left(\Omega\right)=K_0{\lvert\langle \alpha_c | \alpha_v \rangle\rvert}^2 {\left[\frac{8\pi {\mu }^*}{{\hbar }^2a}\right]}^{\frac{1}{2}} \exp{\left( -\frac{{\Delta }^2}{4a{\hbar }^2}\right) } \int\limits_{0}^\infty {dx \exp{\left( -\frac{x^4}{4a \hbar^2}+\frac{\Delta x^2}{2a \hbar^2}\right) }}
 \end{equation}
-
-\noindent После интегрирования по x выражение \eqref{eq:23_50} примет вид:
+После интегрирования по x выражение \eqref{eq:23_50} примет вид:
 \begin{equation} \label{eq:23_60}
-K\left(\Omega\right)=K_0{\left|\left\langle {\alpha }_c\mathrel{\left|\vphantom{{\alpha }_c {\alpha }_v}\right.\kern-\nulldelimiterspace}{\alpha }_v\right\rangle \right|}^2{\left[\frac{\pi {\mu }^*\left|\Delta \right|}{{\hbar }^2a}\right]}^{\frac{1}{2}} \begin{cases}
-e^{-z}K_{{1}/{4}}\left(z\right), \Delta \le 0 \\ 
-\frac{\pi }{\sqrt{2}}e^{-z}\left\{I_{{1}/{4}}\left(z\right)+I_{{-1}/{4}}\left(z\right)\right\}, \Delta >0 \end{cases}
+K(\Omega)=K_0 {\lvert\langle \alpha_c | \alpha_v \rangle\rvert}^2
+{\left[\frac{\pi {\mu }^*\left|\Delta \right|}{{\hbar }^2a}\right]}^{\frac{1}{2}}
+\begin{cases}
+e^{-z} \mathrm{K}_{1/4}(z), \Delta \le 0 \\ 
+\frac{\pi }{\sqrt{2}}e^{-z}[\mathrm{I}_{{1}/{4}}\left(z\right)+\mathrm{I}_{-1/4}\left(z\right)], \Delta >0 \end{cases}
 \end{equation}
-$K_v\left(z\right)$ -- функция Макдональда, $I_v\left(z\right)$ -- модифицированная функция Бесселя,$z={{\Delta }^2}/{8a{\hbar }^2}$
+$\mathrm{K}_v\left(z\right)$ -- функция Макдональда, $\mathrm{I}_v\left(z\right)$ -- модифицированная функция Бесселя,$z={{\Delta }^2}/{8a{\hbar }^2}$
 
 \begin{figure}[ht] 
 	\center
@@ -220,25 +221,20 @@ K\left(\Omega\right)=K_0{\left|\left\langle {\widetilde{\alpha }}_c\mathrel{\lef
 При $\xi ={{\omega }^2_f}/{4a}\gg 1$ (лазерное излучение отсутствует) из \eqref{eq:23_70} следует выражение для коэффициента поглощения слабой электромагнитной волны, полученное в \cite{Kostyukevich2015}. При $\xi <1$ (форма линии поглощения определяется интенсивностью резонансного ИК излучения) получено:
 \begin{multline} \label{eq:23_80}
 K\left(\Omega\right)=K_0{\left|\left\langle {\widetilde{\alpha }}_c\mathrel{\left|\vphantom{{\widetilde{\alpha }}_c {\widetilde{\alpha }}_v}\right.\kern-\nulldelimiterspace}{\widetilde{\alpha }}_v\right\rangle \right|}^2\pi z{\left[\frac{2{мì}^*\pi }{\hbar }{\left(\frac{8z}{a}\right)}^{1/2}\right]}^{1/2}e^{-z}\times\\
-\times \left\{-\left[I_{3/4}\left(z\right)+\mathrm{sign} \triangle I_{-3/4}\left(z\right)\right]+\left(1+\frac{1}{4z}\right)\left[(I_{-1/4}\left(z\right)+ \mathrm{sign} \triangle I_{1/4}\left(z\right)\right]\right\}
+\times \left\{-\left[I_{3/4}\left(z\right)+\mathrm{sign}(\Delta) I_{-3/4}\left(z\right)\right]+\left(1+\frac{1}{4z}\right)\left[(I_{-1/4}\left(z\right)+ \mathrm{sign}(\Delta)  I_{1/4}\left(z\right)\right]\right\}
 \end{multline}
-
 \[
-\mathrm{sign} \Delta = \begin{cases}
+\mathrm{sign}(\Delta) = \begin{cases}
 1,&\Delta >0 \\ 
 -1,&\Delta <0
 \end{cases}
 \] 
-
-
-	
 %\[
 %\mathrm{sign}\ \Delta =\left\{ \begin{array}{c}
 %1,\Delta >0 \\ 
 %-1,\Delta <0 \end{array}
 %\right.
 %\] 
-
 $\left\langle {\widetilde{\alpha }}_c\mathrel{\left|\vphantom{{\widetilde{\alpha }}_c {\widetilde{\alpha }}_v}\right.\kern-\nulldelimiterspace}{\widetilde{\alpha }}_v\right\rangle $ -- матричный элемент сглаженных волновых функций носителей в возбужденном состоянии валентной зоны ($m=0$, $n=1$) и в возбужденном состоянии размерно-квантованной зоны проводимости.
 
 \begin{figure}[ht] 
