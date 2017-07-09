@@ -63,15 +63,18 @@ $\left\langle
 плотности для электронов.
 
 Согласно теореме Вика:
-\begin{equation}\label{eq:31_26}
+\begin{equation} \label{eq:31_26}
 \left\langle {a_\gamma ^ + a_{\gamma _1 } a_{\alpha _1
 	}^ + a_{\beta _1 } } \right\rangle _0 = n_\gamma \left( {1 -
 	n_{\gamma _1 } } \right)\delta _{\gamma \beta _1 } \delta _{\gamma
 	_1 \alpha _1 } + n_\gamma n_{\alpha _1 } \delta _{\gamma \gamma _1
 } \delta _{\alpha _1 \beta _1 } ,
 \end{equation}
-$n_\alpha = \left\{ {\exp\left[ {\beta \left( {\varepsilon _\alpha - \xi } \right)} \right] + 1} \right\}^{ - 1}$~---~равновесная
-функция распределения для электронов с энергией $\varepsilon{_\alpha}$, $\xi $~---~химический потенциал.
+здесь
+\begin{equation}  \label{eq:31_26_20}
+n_\alpha = \frac{1}{\exp\left[ \beta \left( {\varepsilon _\alpha - \xi } \right) \right] + 1}
+\end{equation}
+равновесная функция распределения для электронов с энергией $\varepsilon{_\alpha}$, $\xi $~---~химический потенциал.
 
 С учетом первого слагаемого \eqref{eq:31_26} диагональный тензор
 электропроводности описывается соотношением:
@@ -109,29 +112,29 @@ y_{{\beta }_1\alpha }\left(t\right)=\left\langle {\beta }_1\left|{\exp \left\{-\
 \end{equation} 
 Дальнейшие расчеты проводятся в диагональном приближении, так как процессы рассеяния носителей на шероховатой поверхности являются упругими и происходят в основном в одной размерно-квантованной зоне проводимости. Решение дифференциального уравнения \eqref{eq:31_60} в диагональном приближении $\gamma ={\beta }_1$ с начальным условием $y_{{\beta }_1\alpha }\left(0\right)={\delta }_{{\beta }_1\alpha }$ записывается следующим образом:
 \begin{equation} \label{eq:31_70}
-y_{\beta_1\alpha }(t)=\exp \left\{-\frac{1}{{\hbar }^2}\int^t_0{d \tau \int^{\tau }_0{d {\tau }_1\left\langle {\beta }_1\left|{\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right|{\beta }_1\right\rangle }}\right\}{\delta }_{{\beta }_1\alpha }
+y_{\beta_1\alpha }(t)=\exp \left\{-\frac{1}{{\hbar }^2}\int\limits_0^t{d \tau \int\limits_0^{\tau} {d \tau_1 \left\langle \beta_1 \left| {\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right| \beta_1 \right\rangle}} \right\} \delta_{\beta_1\alpha}
 \end{equation} 
-
-\noindent Не трудно показать, что
+Не трудно показать, что
 \begin{equation} \label{eq:31_80}
-\left\langle {\beta }_1\left|{\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right|{\beta }_1\right\rangle =\sum_{\gamma }{W_{{\beta }_1\gamma }\exp \left[\frac{i}{\hbar }\left({\tau }_1-\tau \right)\left({\varepsilon }_{{\beta }_1}-{\varepsilon }_{\gamma }\right)\right]\ }
+\left\langle \beta_1 \left| {\left\{V\left(\tau \right)V\left({\tau }_1\right)\right\}}_V\right| \beta_1 \right\rangle =\sum_{\gamma} {W_{\beta_1\gamma} \exp \left[\frac{i}{\hbar} \left(\tau_1-\tau \right) \left(\varepsilon_{\beta_1} - \varepsilon_{\gamma} \right)\right]\ }
 \end{equation}
 \begin{equation} \label{eq:31_85}
 W_{\alpha\beta}=\int{d\vect{r} d\vect{r_1} \Psi^*_\alpha(\vect{r}) \Psi^*_\beta(\vect{r_1}) V_\alpha V_\beta F \Psi_\alpha(\vect{r_1}) \Psi_\beta(\vect{r})}
 \end{equation}
-Если подставить \eqref{eq:31_80} в \eqref{eq:31_70} и провести интегрирование по $\tau ,{\tau }_1$, то в результате получаем
+Если подставить \eqref{eq:31_80} в \eqref{eq:31_70} и провести интегрирование по $\tau, \tau_1$, то в результате получаем
 \begin{equation} \label{eq:31_90}
-y_{{\beta }_1\alpha}(t)=\exp [g_{\alpha }\left(t\right)]{\delta }_{{\beta }_1\alpha}
+y_{\beta_1\alpha}(t)= \exp \left[g_{\alpha }\left(t\right)\right] \delta_{\beta_1\alpha}
 \end{equation}
 \begin{multline} \label{eq:31_100}
-g_{\alpha}(t)=-2\sum_{\gamma}{W_{\alpha \gamma }\frac{{\sin}^2 \frac{t}{\hbar } (\varepsilon_{\alpha} - \varepsilon_{\gamma})}{{(\varepsilon_{\alpha} - \varepsilon_{\gamma})}^2}}+\\
+g_{\alpha}(t)=-2\sum_{\gamma}{W_{\alpha \gamma }\frac{\sin^2 \frac{t}{\hbar} (\varepsilon_{\alpha} - \varepsilon_{\gamma})}{{(\varepsilon_{\alpha} - \varepsilon_{\gamma})}^2}}+\\
 +i\sum_{\gamma }{\frac{W_{\alpha \gamma}}{(\varepsilon_{\alpha} - \varepsilon_{\gamma})}}\left\{\frac{t}{\hbar }-\frac{1}{(\varepsilon_{\alpha} - \varepsilon_{\gamma})}{\sin\left[ \frac{t}{\hbar }(\varepsilon_{\alpha } - \varepsilon_{\gamma})\right] }\right\}.	
 \end{multline}
-Первое слагаемое в $g_{\alpha }\left(t\right)$ связано с квантово-механической вероятностью перехода носителя в единицу времени под влиянием возмущения $V$; второе слагаемое, в частности, определяет сдвиг энергии электрона под влиянием возмущения $V$.
+Первое слагаемое в $g_{\alpha}\left(t\right)$ связано с квантово-механической вероятностью перехода носителя в единицу времени под влиянием возмущения $V$. Второе слагаемое, в частности, определяет сдвиг энергии электрона под влиянием возмущения $V$.
 Подставляя \eqref{eq:31_90} в \eqref{eq:31_30}, электропроводность можно записать в виде:
-\begin{equation} \label{eq:31_110}
-{\sigma }_{ij}=\frac{{\beta }_0e^2}{2Vm^2_e}\sum_{\alpha \beta }{{\hat{P}}^{\left(i\right)}_{\alpha \beta }{\hat{P}}^{\left(j\right)}_{\beta \alpha }n_{\alpha }\left(1-n_{\beta }\right)}\int\limits_{-\infty }^\infty{dt e^{\frac{it}{\hbar }({\varepsilon }_{\alpha }-{\varepsilon }_{\beta })}\exp [g_{\alpha }(t)+g_{\beta }(t)]}.
-\end{equation} 
+\begin{multline} \label{eq:31_110}
+\sigma_{ij}=\frac{\beta_0 e^2}{2V m^2_e}\sum_{\alpha\beta } {{\hat{P}}^{(i)}_{\alpha\beta} {\hat{P}}^{(j)}_{\beta\alpha} n_{\alpha} \left(1-n_{\beta}\right)} \times\\
+\times \int\limits_{-\infty }^\infty {dt \exp{ \left[\frac{it}{\hbar} \left( \varepsilon_{\alpha } - \varepsilon_{\beta} \right) \right] }  \exp{ \left[ g_{\alpha }(t)+g_{\beta }(t)\right]} }.
+\end{multline} 
 
 Если рассматривать упругое рассеяние в одной зоне и учесть, что в дальнейшем рассматриваем кинетические процессы с ${\hat{P}}_{\alpha \beta }\sim {\delta }_{\alpha \beta }$, то \eqref{eq:31_110} можно представить в виде $(i=j)$:
 \begin{multline} \label{eq:31_120}
@@ -139,14 +142,14 @@ g_{\alpha}(t)=-2\sum_{\gamma}{W_{\alpha \gamma }\frac{{\sin}^2 \frac{t}{\hbar } 
 \times\int\limits_{- \infty }^\infty {dt \exp \left[-\sum_{\gamma }{W_{\alpha \gamma }\frac{4 \sin^2 \frac{t}{\hbar}\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}{(\varepsilon_{\alpha } - \varepsilon_{\gamma })^2}}\right]}
 \end{multline}
 
-При $t\to \infty $, когда можно ввести понятие о независящей от времени вероятности перехода \cite{LandauT3}, то
+При $t\to \infty $, когда можно ввести понятие о независящей от времени вероятности перехода \cite{LandauT3}, тогда
 \begin{equation} \label{eq:31_130}
-\sum_{\gamma }{W_{\alpha \gamma }\frac{4 \sin^2 \frac{t}{\hbar}\left({\varepsilon }_{\alpha }-{\varepsilon }_{\gamma }\right)}{(\varepsilon_{\alpha } - \varepsilon_{\gamma })^2}}\Rightarrow \left|t\right|\frac{1}{{\tau }_{\alpha }};
+\sum_{\gamma }{W_{\alpha \gamma }\frac{4 \sin^2 \frac{t}{\hbar}\left(\varepsilon_{\alpha } - \varepsilon_{\gamma }\right)}{(\varepsilon_{\alpha } - \varepsilon_{\gamma })^2}} \Rightarrow \left|t\right|\frac{1}{\tau_{\alpha}};
 \end{equation}
 \begin{equation} \label{eq:31_140}
-\frac{1}{\tau_{\alpha}}=\frac{2\pi}{\hbar} \sum_{\gamma }{W_{\alpha \gamma }\delta \left(\varepsilon_{\alpha} - \varepsilon_{\gamma}\right)}
+\frac{1}{\tau_{\alpha}}=\frac{2\pi}{\hbar} \sum_{\gamma} {W_{\alpha\gamma} \delta \left(\varepsilon_{\alpha} - \varepsilon_{\gamma} \right)}
 \end{equation}
-${1}/{\tau_{\alpha}}$ --- квантово-механическая вероятность рассеяния носителей в единицу времени на шероховатой поверхности.
+${1}/{\tau_{\alpha}}$~---~квантово-механическая вероятность рассеяния носителей в единицу времени на шероховатой поверхности.
 
 С учетом \eqref{eq:31_130} электропроводность определяется соотношением
 \begin{equation} \label{eq:31_150}
@@ -155,20 +158,9 @@ ${1}/{\tau_{\alpha}}$ --- квантово-механическая вероят
 
 Заметим, что соотношение для электропроводности \eqref{eq:31_150} получено из самых общих соотношений квантовой статистики без привлечения решения классического уравнения Больцмана, которое, как известно, имеет ограниченную область применения. В классическое выражение для тензора электропроводности входит не время релаксации ${\tau }_{\alpha }$, а транспортное время релаксации, которое естественным образом возникает при решении кинетического уравнения Больцмана \cite{Anselm1978}. При этом время релаксации и транспортное время в случае упругого рассеяния носителей на длинноволновых акустических колебаниях, на примесях, при рассеянии на шероховатой поверхности в случае $\delta $-образной флуктуации поверхности не отличаются (в случае гауссовой флуктуации поверхности см. замечание в \ref{sect1_2}). Последнее обстоятельство является не случайным, т.к. выражение для электропроводности \eqref{eq:31_150} получено при условии упругих процессов рассеяния носителей и при возможности введения независимой от времени вероятности процесса рассеяния. Но именно из тех же соображений вводится интеграл столкновений при выводе классического уравнения Больцмана.
 
-Для прямоугольной КЯ с бесконечным потенциалом для случая гауссовой флуктуации поверхности
-\begin{equation} \label{eq:31_160}
-W_{\gamma \beta } =\frac{\pi }{L_x L_y } (\Delta \Lambda )^2 V_{\gamma } V_{\beta } \exp \left[-\frac{\Lambda^2 }{4} \left|k_{\bot } -k'_{\bot } \right|^2 \right],
-\end{equation}
-и время релаксации при рассеянии носителей в одной зоне определяется соотношением:
-\begin{equation} \label{eq:31_170}
-\frac{1}{\tau _{\alpha } } =\frac{\pi m_e (\Delta \Lambda V_0 )^2 }{\hbar^3 } \exp \left(-\frac{\Lambda^2}{2} k_{\bot }^2 \right)\mathrm{I}_0 \left(\frac{\Lambda^2 }{2} k_{\bot }^2 \right), \;
-V_0 =-\frac{\hbar^2 \pi^2 }{m_e L^3 }
-\end{equation}
-${\mathrm I}_0 (z)$ -- модифицированная функция Бесселя нулевого индекса.
-
-Рассмотрим, случай, когда электроны находятся на нижайшем размерно-квантованном уровне $(n=1)$ прямоугольной КЯ. Это выполнимо, если $3\hbar ^{2} \pi ^{2} /\left(2m_e L^2 \right) \gg k_0 T$. В результате \eqref{eq:31_150} после суммирования по $k_{\bot } $ принимает вид $(i=x)$:
+Рассмотрим прямоугольную КЯ с бесконечным потенциалом с гауссовой флуктуацией поверхности. В этом случае время релаксации при рассеянии носителей в одной зоне определяется соотношением \eqref{eq:1_9}. При низких температурах  $3\hbar^2 \pi^2 /\left(2m_e L^2 \right) \gg k_0 T$ когда электроны находятся на нижайшем размерно-квантованном уровне $(n=1)$ прямоугольной КЯ выражение \eqref{eq:31_150} после суммирования по $k_{\bot } $ принимает вид $(i=x)$:
 \begin{equation} \label{eq:31_180}
-\sigma _{xx} =\frac{e^2 \hbar^3 \delta}{m_e^2 \pi^2 \left(\Delta \Lambda^2 V_1 \right)^2 L} \int\limits_0^\infty {d\tau \frac{\tau \cdot \exp \left(\delta \tau -\beta_0 \tilde{\xi }\right)}{\exp(-\tau )\mathrm{I}_0 (\tau )\cdot \left[\exp \left(\delta \tau -\beta_0 \tilde{\xi }\right)+1\right]^2 }},
+\sigma _{xx} =\frac{e^2 \hbar^3 \delta}{m_e^2 \pi^2 \left(\Delta \Lambda^2 V_1 \right)^2 L} \int\limits_0^\infty { \frac{d\tau \cdot \tau \cdot \exp \left(\delta \tau -\beta_0 \tilde{\xi }\right)}{\exp(-\tau )\mathrm{I}_0 (\tau )\cdot \left[\exp \left(\delta \tau -\beta_0 \tilde{\xi }\right)+1\right]^2 }},
 \end{equation}
 \[
 \beta_0 = \frac{1}{k_0 T}, \; \delta =\frac{\beta_0 \hbar^2 }{m_e \Lambda^2 },
@@ -189,7 +181,7 @@ $$\exp(\beta_0 \tilde{\xi }) = \frac{\beta_0 \pi \hbar^2 n_s}{m_e} $$
 \mu _{0} =\frac{e}{\hbar \pi^5 } \left(\frac{L^3 }{\Delta \Lambda } \right)^2.
 \] 
 
-\begin{figure}[h]
+\begin{figure}[!h]
 	\center
 	\includegraphics [scale=1] {fig_3_1_1}
 	\caption{Температурная зависимость подвижности (в относительных единицах) при учете рассеяния носителей на шероховатой поверхности в КЯ при $\Lambda =70 \AA$, $\Delta =3 \AA$, $L_{0} = 100 \AA$, кривые 1, 2, 3 получены соответственно для $n_{s} = 10^{11} \text{cm}^{-2}$, $n_{s} = 7 \cdot 10^{11} \text{cm}^{-2}$,$n_{s} = 1.5 \cdot 10^{12} \text{cm}^{-2}$.}
@@ -249,7 +241,7 @@ $\beta_0 \tilde{\xi }$ определяется из уравнения:
 \end{equation}
 $n_{l} =N/L_{x} $ -- линейная плотность электронов.
 
-\begin{figure}[h]  
+\begin{figure}[!h]  
 	\center
 	\includegraphics [scale=1] {fig_3_1_2}
 	\caption{Температурная зависимость подвижности (в относительных единицах) при учете рассеяния носителей на шероховатой поверхности в КП при $\Lambda =20 \AA$, $\Delta =2 \AA$, $R_{0}=100 \AA$, кривые 1, 2, 3 получены соответственно для $n_{l} = 10^5 \text{cm}^{-1}$, $n_l = 5 \cdot 10^5 \text{cm}^{-1}$,$n_{s} = 10^6 \text{cm}^{-1}$.}
@@ -313,7 +305,7 @@ $\tau _{\alpha } $ --- время релаксации, определяемое
 \sigma _{xx}^{(d)} =\frac{e^2 \hbar^3 }{\pi^2 m^2 \left(\Delta \Lambda^2 V_0 \right)^2 L} \cdot 
 \frac{\delta \gamma \cdot \delta_0 }{\delta \gamma \cdot \mathrm{I}_0 \left(\delta_0 \right)\exp\left(-\delta_0 \right)+1} ,
 \end{equation}
-$n_s $ -- поверхностная плотность электронов, $\delta_0 =\pi \Lambda^2 n_s $.
+$n_s $~---~поверхностная плотность электронов, $\delta_0 =\pi \Lambda^2 n_s $.
 
 При $\delta \gamma \gg 1$ из \eqref{eq:31_380} получается выражение для подвижности \eqref{eq:31_220}. Если $\delta \gamma \ll 1$, то из \eqref{eq:31_380} следует соотношение для подвижности в прямоугольной квантовой яме, когда учитывается взаимодействие носителей с длинноволновыми фононами:
 \begin{equation} \label{eq:31_390}
@@ -353,7 +345,7 @@ q=\frac{m \rho \nu^2 \sqrt{\pi } \pi R_0^2 }{2\hbar^2 E_1^2 } \left(\Delta \Lamb
 \sigma _{xx}^{(fnd)} =\frac{e^2 \hbar \rho \nu^2 \beta_0 }{\pi m E_1^2 } \tilde{\xi }.
 \end{equation}
 
-\begin{figure}[h]  
+\begin{figure}[!h]  
 	\center
 	\includegraphics [scale=1] {fig_3_1_3}
 	\caption{Температурная зависимость подвижности (в относительных единицах) при учете рассеяния носителей на шероховатой поверхности и на фононах в КЯ при $\Lambda =70 \AA$, $\Delta =3 \AA$, $L_{0}=100 \AA$, кривые 1, 2, 3 получены соответственно для $n_s = 10^{11} \text{cm}^{-2}$, $n_s = 7 \cdot 10^{11} \text{cm}^{-2}$, $n_s = 1.5 \cdot 10^{12} \text{cm}^{-2}$.} 
@@ -364,44 +356,104 @@ q=\frac{m \rho \nu^2 \sqrt{\pi } \pi R_0^2 }{2\hbar^2 E_1^2 } \left(\Delta \Lamb
 
 \section{ Электропроводность в размерно-квантовых системах с учётом рассеяния носителей на шероховатой поверхности в магнитном поле}
 
-Рассмотрим особенности электропроводности, возникающие в размерно-квантованных системах в присутствии однородного магнитного поля напряжённостью $\vect{H}$. Для параболических КЯ в продольном магнитном поле ($\vect{H} || OX$) электропроводность для основного состояния описывается соотношением:
-\begin{equation} \label{eq:32_10}
-\sigma_{xx} =\frac{e^2 \hbar^3 n}{m^2 \gamma V_0^2 } \left[\frac{\omega }{\Omega } \right],
- \end{equation}
- \begin{equation} \label{eq:32_20}
- V_0 =\frac{\hbar }{2} \left(\frac{\omega }{\Omega } \right)\frac{\partial \omega }{\partial L} .
- \end{equation}
+Рассмотрим особенности электропроводности, возникающие в в квантовых ямах в присутствии однородного магнитного поля напряжённостью $\vect{H}$. Волновые функции и собственные значения в таких системах известны \cite{Tavger1966} и имеют вид ($\vect{H} \parallel OX$, размерное квантование по $OZ$):
+\begin{equation} \label{eq:32_05_10}
+\Psi^{(c)}_{k_x,k_y,n}(x,y,z)=\frac{e^{ik_x x}}{\sqrt{L_x}}\frac{e^{ik_y y}}{\sqrt{L_y}}{\left(\frac{\lambda }{\pi }\right)}^{\frac{1}{4}}\frac{1}{\sqrt{2^n n!}}H_n\left[(z-z_0)\sqrt{\lambda }\right]e^{-\frac{\lambda }{2}(z-z_0)^2},
+\end{equation}
+\begin{equation} \label{eq:32_05_20}
+E_{\alpha }=\frac{{\hbar }^2 k^2_x}{2m_e}+{\left(\frac{\omega }{\Omega }\right)}^2\frac{\hbar^2 k^2_y}{2m_e} +\hbar\Omega \left(n+\frac{1}{2}\right),
+\end{equation}
+здесь обозначено
 \[
-\Omega^2 =\omega^2 +\omega_c^2,
-\] 
-\[
-\hbar \omega =\frac{1}{L} \left(\frac{8\Delta E_c }{m} \right)^{\frac{1}{2} } 
+\lambda =\frac{m_e\Omega }{\hbar },\;
+\Omega =\sqrt{\omega^2+\omega^2_c},\;
+z^{(c)}_0=-\frac{\hbar \omega_c k_x}{m_e \Omega^2},
 \]
--- шаг пространственного квантования, $\omega _{c} $-- циклотронная частота, $n$-- концентрация носителей.
+$\hbar \omega =\dfrac{1}{L} \sqrt{\dfrac{8\Delta E_c }{m_e}} $~---~шаг пространственного квантования,
+$\omega_c=\dfrac{eH}{m_e c}$~---~циклотронная частота.
 
-С учётом \eqref{eq:32_10}, \eqref{eq:32_20} подвижность для электронного газа с произвольным вырождением принимает вид:
-
-\begin{equation} \label{eq:32_30}
-\mu _{xx} =\frac{4e\hbar }{m^{2} \gamma } \left(\frac{\partial \omega }{\partial L} \right)^{-2} \left[1+\left(\frac{\omega _{c} }{\omega } \right)^{2} \right]^{\frac{1}{2} }.
+Из \eqref{eq:32_05_20} следует, что выражение для $ V_{\alpha}$ в \eqref{eq:1_1} имеет вид:
+\begin{equation} \label{eq:32_05_30}
+V_{\alpha} = \frac{\partial E_{\alpha }}{\partial L}=\hbar \left[\frac{\hbar\omega}{m_e \Omega^2} {\left(\frac{\omega_c}{\Omega }\right)}^2 k^2_y+\frac{\omega}{\Omega} \left(n+\frac{1}{2}\right)\right] \frac{\partial\omega}{\partial L}
+\end{equation}
+первым слагаемым в \eqref{eq:32_05_30} можно пренебречь когда
+\[
+\frac{\hbar^2}{2m_e}k^2_y \ll \hbar \Omega.
+\]
+Последнее неравенство, как правило выполняется т.к. рассеяние на шероховатой поверхности вносит заметный вклад при низких температурах и сильном размерном квантовании. Тогда
+\begin{equation} \label{eq:32_05_40}
+V_{\alpha} = V_n = 2 V_0 \left(n+\frac{1}{2}\right),
+\end{equation}
+\begin{equation} \label{eq:32_05_42}
+V_0 = \frac{\hbar}{2} \frac{\omega}{\Omega} \frac{\partial\omega}{\partial L}
+\end{equation}
+и для $\delta$-коррелированной поверхности матричный элемент взаимодействия \eqref{eq:31_85} при рассеянии в одной размерно-квантованной зоне равен:
+\begin{equation} \label{eq:32_05_50}
+W_{\alpha \beta }=\frac{\gamma_0 V^2_n}{L_x L_y} \delta_{\alpha \beta},
+\end{equation}
+следовательно время релаксации \eqref{eq:31_140} принимает вид:
+\begin{equation} \label{eq:32_05_60}
+\frac{1}{\tau_{\alpha }}=\frac{\gamma_0 m_e V_n^2}{\hbar^3}\left(\frac{\Omega }{\omega }\right).
 \end{equation}
 
-Заметим, что подвижность в размерно-ограниченных системах при учёте рассеяния носителей на длинноволновых колебаниях с ростом магнитного поля уменьшается \cite{Sinyavskii1998}. Это связано с ростом локализации зонных электронов. Как непосредственно следует из \eqref{eq:32_30} $\mu _{xx} $ с ростом магнитного поля увеличивается. Такое поведение зависимости подвижности от продольного магнитного поля может быть понято из следующих соображений. В параболической КЯ радиус локализации электрона $\lambda _{0} =\sqrt{\frac{\hbar }{m\Omega } } $ с ростом напряженности магнитного поля уменьшается, число носителей тока, рассеивающихся на шероховатой поверхности размерно-ограниченной системы, становится меньше, что и приводит к росту подвижности.
+Для вычисления электропроводности вдоль магнитного поля $\sigma_{xx}$ необходим матричный элемент импульса $P^{(x)}_{\alpha\beta}$ на волновых функциях \eqref{eq:32_05_10}, который описывается соотношением \cite{Sinyavskii1998}:
+\begin{equation} \label{eq:32_05_70}
+P^{(x)}_{\alpha\beta} =\hbar k_x \delta_{\alpha\beta}.
+\end{equation}
 
-В поперечном магнитном поле в плоскости КЯ ($\vect{H} || OY$) матричные элементы обобщённого импульса, входящие в общее выражение для электропроводности \eqref{eq:31_150} определяются следующим образом:
+Подставляя \eqref{eq:32_05_70} и \eqref{eq:31_140}, с учетом \eqref{eq:31_26_20} и \eqref{eq:32_05_20} в общее выражение для электропроводности \eqref{eq:31_150} $\sigma_{xx}$ получим:
+\begin{equation} \label{eq:32_05_80}
+\sigma_{xx} = \frac{e^2 k_0 T \hbar}{\pi \gamma_0 m_e L 4V^2_0} \sum_n{\frac{\ln{\left\{\exp{\left[\beta \left(\widetilde{\xi}-\hbar \Omega n\right)\right]}+1\right\}}}{{\left(n+\frac{1}{2}\right)}^2}}. 
+\end{equation}
+Здесь
+\[
+\widetilde{\xi} = \xi -\frac{\hbar\Omega }{2}
+\]
+химический потенциал отсчитанный от дна нижайшей зоны проводимости, который находится из условия:
+\begin{equation} \label{eq:32_05_90}
+N=\sum_{\alpha }{n_{\alpha}}.
+\end{equation}
+Подставляя \eqref{eq:31_26_20} и \eqref{eq:32_05_20} в \eqref{eq:32_05_90} получаем:
+\begin{equation} \label{eq:32_05_100}
+\sum_n{\ln{\left\{\exp{\left[\beta \left(\widetilde{\xi}-\hbar \Omega n\right)\right]}+1\right\}}}=\frac{\omega }{\Omega } \frac{\beta \hbar^2 \pi L n_e}{m_e}
+\end{equation}
+$n_e$~---~концентрация электронов.
+
+В квантовом пределе, когда все носители находятся на нижайшем уровне подставляя \eqref{eq:32_05_90} в \eqref{eq:32_05_80} получим:
+\begin{equation} \label{eq:32_10}
+\sigma_{xx} =\frac{e^2 \hbar^3 n_e}{m^2 \gamma V_0^2 } \left[\frac{\omega }{\Omega } \right].
+\end{equation}
+
+С учётом \eqref{eq:32_10}, \eqref{eq:32_05_42} подвижность для электронного газа с произвольным вырождением принимает вид:
+\begin{equation} \label{eq:32_30}
+\mu _{xx} =\frac{4e\hbar }{m^{2} \gamma } \left(\frac{\partial \omega }{\partial L} \right)^{-2} \left[1+\left(\frac{\omega_c}{\omega } \right)^2 \right]^{\frac{1}{2} }.
+\end{equation}
+
+Заметим, что подвижность в размерно-ограниченных системах при учёте рассеяния носителей на длинноволновых колебаниях с ростом магнитного поля уменьшается \cite{Sinyavskii1998}. Это связано с ростом локализации зонных электронов. В противоположность этому, как непосредственно следует из \eqref{eq:32_30} $\mu_{xx} $ в случае рассеяния на шероховатой поверхности с ростом магнитного поля увеличивается. Такое поведение зависимости подвижности от продольного магнитного поля может быть понято из следующих соображений. В параболической квантовой яме радиус локализации электрона $\lambda_0 =\sqrt{\hbar / (m\Omega) } $ с ростом напряженности магнитного поля уменьшается, число носителей тока, рассеивающихся на шероховатой поверхности размерно-ограниченной системы, становится меньше, что и приводит к росту подвижности.
+
+В поперечном магнитном поле в плоскости квантовой ямы матричные элементы обобщённого импульса, входящие в общее выражение для электропроводности $\sigma_{yy}$ определяются следующим образом:
 \begin{equation} \label{eq:32_40}
-P_{\alpha \beta }^{\left(x\right)} =\hbar k_{x} \left(\frac{\omega }{\Omega } \right)\delta _{\alpha \beta } -\frac{m\omega _{c} }{\sqrt{2} \lambda } \delta _{k_{x} k'_{x} } \delta _{k_{y} k'_{y} } \left\{\sqrt{n} \delta _{n,n_{1} +1} +\sqrt{n+1} \delta _{n,n_{1} +1} \right\}.
+P^{(y)}_{\alpha\beta} = {\left(\frac{\omega}{\Omega}\right)}^2 \hbar k_y \delta_{\alpha\beta} - \frac{m_e \omega_c}{\sqrt{2\lambda}} \left(\sqrt{n+1} \delta_{n-1,n'} + \sqrt{n} \delta_{n+1,n'} \right) \delta_{k_x k'_x} \delta_{k_y k'_y}.
 \end{equation}
 Следовательно, матричный элемент обобщенного импульса имеет как диагональные элементы (первое слагаемое в \eqref{eq:32_40}), так и недиагональные элементы по квантовому числу размерно-магнитного квантования (второе слагаемое). Заметим, что диагональный матричный элемент возникает только в размерно-ограниченных системах (при $\omega \to 0$ это слагаемое в \eqref{eq:32_40} отсутствует).
 
-В дальнейшем будем рассматривать электропроводность с учётом диагонального слагаемого в матричном элементе обобщенного импульса. Подвижность в поперечном магнитном поле при низких температурах для основного состояния имеет вид:
-\begin{equation} \label{eq:32_50}
-\mu _{x} =\frac{4e\hbar }{m^{2} \gamma } \left(\frac{\partial \omega }{\partial L} \right)^{-2} \left[1+\left(\frac{\omega _{c} }{\omega } \right)^{2} \right]^{-\frac{1}{2} }
+В дальнейшем будем рассматривать электропроводность с учётом диагонального слагаемого в матричном элементе обобщенного импульса:
+\begin{equation} \label{eq:32_45}
+P^{(y)}_{\alpha\beta} = {\left(\frac{\omega}{\Omega}\right)}^2 \hbar k_y \delta_{\alpha\beta}.
 \end{equation}
-Следовательно, с ростом магнитного поля подвижность уменьшается и при $\left(\frac{\omega _{c} }{\omega } \right)^{2} \gg 	1$ $\mu _{x} \sim \frac{1}{H} $. Такое поведение подвижности от $H$связано с тем, что в скрещенных магнитном и электрическом полях носители с дрейфовой скоростью перемещаются вдоль оси пространственного квантования по трохоиде, поэтому активно участвуют в процессах рассеяния на шероховатостях поверхности размерно-квантовой системы. 
+Подвижность в поперечном магнитном поле при низких температурах для основного состояния, аналогично \eqref{eq:32_30} имеет вид:
+\begin{equation} \label{eq:32_50}
+\mu_{yy} =\frac{4e\hbar }{m^{2} \gamma } \left(\frac{\partial \omega }{\partial L} \right)^{-2} \left[1+\left(\frac{\omega _{c} }{\omega } \right)^{2} \right]^{-\frac{3}{2} }
+\end{equation}
+Следовательно, с ростом магнитного поля подвижность уменьшается и при
+\[
+\left(\frac{\omega_c}{\omega } \right)^2 \gg 1 \Rightarrow \mu_{xx} \sim \frac{1}{H} .
+\]
+Такое поведение подвижности от $H$ связано с тем, что в скрещенных магнитном и электрическом полях носители с дрейфовой скоростью перемещаются вдоль оси пространственного квантования по трохоиде, поэтому активно участвуют в процессах рассеяния на шероховатостях поверхности размерно-квантовой системы. 
 
 Рассмотрим электропроводность в квантовых проволоках в однородном магнитном поле. В продольном магнитном поле время релаксации, определяемое \eqref{eq:31_140}, вычисляется обычным образом. В результате
 \begin{equation} \label{eq:32_60}
-\frac{1}{\tau _{\alpha } } =\frac{\gamma _{0} }{\hbar ^{3} } 2mV_{\alpha }^{2} \frac{1}{\left|k_{x} \right|} . 
+\frac{1}{\tau_{\alpha } } = \frac{2m \gamma_0 V_{\alpha }^2  }{\hbar^3 } \frac{1}{\left|k_x \right|} . 
 \end{equation}
 
 Электропроводность \eqref{eq:31_150} в рассматриваемой модели параболической КП принимает вид:
@@ -411,31 +463,31 @@ P_{\alpha \beta }^{\left(x\right)} =\hbar k_{x} \left(\frac{\omega }{\Omega } \r
 \[
 V_{\alpha } =\frac{4}{\left[4+\delta ^{2} \right]^{\frac{1}{2} } } \left[n+\frac{1}{2} +\frac{\left|\nu \right|}{2} \right]\frac{\partial (\hbar \omega )}{\partial R_{0} } .
 \] 
-При этом $\xi _{n\nu } $определяется из уравнения для химического потенциала параболической КП:
+При этом $\xi _{n\nu }$ определяется из уравнения для химического потенциала параболической квантовой проволоки:
 \begin{equation} \label{eq:32_80}
-\sum _{n\nu }\int _{0}^{\infty }\frac{dx}{1+e^{x^{2} -\beta \xi _{n\nu } } } =\frac{\pi n_{e} }{2} \left(\frac{\hbar ^{2} \beta }{2m} \right)^{\frac{1}{2} } 
+\sum_{n\nu} \int\limits_0^{\infty}\frac{dx}{1+e^{x^2 -\beta \xi_{n\nu } } } = \frac{\pi n_e }{2} \left(\frac{\hbar^2 \beta }{2m} \right)^{\frac{1}{2} } 
 \end{equation}
 
 Для невырожденного электронного газа из \eqref{eq:32_80} следует:
 \[
-\sum _{n\nu }e^{\beta \xi _{n\nu } }  =n_{e} \left[\frac{\pi \hbar ^{2} \beta }{2m} \right]^{\frac{1}{2} } .
+\sum_{n\nu} e^{\beta \xi_{n\nu} }  =n_e \left[\frac{\pi \hbar^2 \beta}{2m} \right]^{\frac{1}{2}} .
 \] 
 И, следовательно, для основного размерно-квантового состояния ($n=\nu =0$) подвижность записывается в виде:
 \begin{equation} \label{eq:32_90}
-\mu _{x}^{\left(nd\right)} =\frac{eR_{0}^{4} \left[4+\left(\frac{\omega _{c} }{\omega } \right)^{2} \right]}{4\gamma _{0} \left(\Delta E_{c} \right)\sqrt{2m\beta \pi } } . 
+\mu_x^{\left(nd\right)} =\frac{eR_0^{4} \left[4+\left(\frac{\omega_c }{\omega } \right)^2 \right]}{4 \gamma_0 \left(\Delta E_c \right)\sqrt{2m\beta \pi } } . 
 \end{equation}
 В случае вырожденного электронного газа из \eqref{eq:32_80} нетрудно получить
 \[
-\sum _{n\nu }\sqrt{\xi _{n\nu } }  =\pi n_{e} \left[\frac{\hbar ^{2} }{2m} \right]^{\frac{1}{2} } .
+\sum_{n\nu }\sqrt{\xi_{n\nu } }  =\pi n_e \left[\frac{\hbar^2 }{2m} \right]^{\frac{1}{2} } .
 \] 
 и для основного электронного состояния ($n=\nu =0$) подвижность определяется соотношением:
 \begin{equation} \label{eq:32_100}
-\mu _{x}^{\left(d\right)} =\frac{e\pi \left[4+\left(\frac{\omega _{c} }{\omega } \right)^{2} \right]n_{e} \hbar R_{0}^{4} }{8m\gamma _{0} \left(\Delta E_{c} \right)} .
+\mu_x^{(d)} =\frac{e\pi \left[4+\left(\frac{\omega_c }{\omega } \right)^2 \right] n_e \hbar R_0^4 }{8m\gamma_0 \left(\Delta E_c \right)} .
 \end{equation}
  
-Следовательно, в продольном магнитном поле, подвижность, увеличивается ($\mu _{x} \sim H^{2} $ ) и существенным образом зависит от радиуса квантовой проволоки ($\mu _{x} \sim R_{0}^{4} $). Если для невырожденного электронного газа  подвижность \eqref{eq:32_90} увеличивается с ростом температуры, то для вырожденной размерно-квантовой проволоки подвижность при низких температурах не зависит от $T$. На рис. \ref{img:fig_3_2_1} представлена зависимость сопротивления (в относительных единицах) от напряженности магнитного поля с учетом рассеяния носителей на шероховатой поверхности (пунктирная линия). Сплошной линией представлена зависимость относительного сопротивления от магнитного поля для нанопроволок висмута с учетом рассеяния на шероховатой поверхности и при упругом рассеянии на акустических фононах. Именно, такая зависимость сопротивления от магнитного поля экспериментально наблюдалась в работе \cite{Nikolaeva2004}.
+Следовательно, в продольном магнитном поле, подвижность, увеличивается ($\mu_x \sim H^2 $ ) и существенным образом зависит от радиуса квантовой проволоки ($\mu _{x} \sim R_0^4 $). Если для невырожденного электронного газа  подвижность \eqref{eq:32_90} увеличивается с ростом температуры, то для вырожденной размерно-квантовой проволоки подвижность при низких температурах не зависит от $T$. На рисунке\ref{img:fig_3_2_1} представлена зависимость сопротивления (в относительных единицах) от напряженности магнитного поля с учетом рассеяния носителей на шероховатой поверхности (пунктирная линия). Сплошной линией представлена зависимость относительного сопротивления от магнитного поля для нанопроволок висмута с учетом рассеяния на шероховатой поверхности и при упругом рассеянии на акустических фононах. Именно, такая зависимость сопротивления от магнитного поля экспериментально наблюдалась в работе \cite{Nikolaeva2004}.
 
-\begin{figure}[h] 
+\begin{figure}[!h] 
 	\center
 	\includegraphics [scale=1] {fig_3_2_1}
 	\caption{Зависимость относительного сопротивления от магнитного поля для нанопроволоки висмута ($d=80 \text{ nm}$, $T=4.2\text{ K}$). Пунктирной линией показана зависимость $R(H)/R(0)$ при учете рассеяния носителей на поверхности, сплошной линией при учете рассеяния носителей на шероховатой поверхности и на акустических фононах.} 
