@@ -9,10 +9,13 @@
 !biblio
 !common
 !images
+!Synopsis
 
 # Перечисляем сами файлы
 !dissertation.tex
 !dissertation.pdf
+!synopsis.pdf
+!synopsis.tex
 
 !Dissertation/introduction.tex
 !Dissertation/part1.tex
@@ -20,6 +23,8 @@
 !Dissertation/part3.tex
 !Dissertation/part4.tex
 !Dissertation/conclusion.tex
+
+!Synopsis/content.tex
 
 !biblio/biblatex.tex
 !biblio/othercites.bib
